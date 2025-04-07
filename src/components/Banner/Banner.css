@@ -1,0 +1,8 @@
+.banner{
+    background-image:url(/assets/BannerVideo.mp4);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height:100dvh;
+}

@@ -1,0 +1,40 @@
+/* Line between steps */
+.two-lines {
+    position: relative;
+  }
+  
+  .two-lines::after {
+    content: "";
+    position: absolute;
+    top: 39px;
+    right: 14px;
+    width: 2px;
+    height: 34px;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Background Image */
+  .background-image {
+    background-image: url(/public/assets/bg-img.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top right;
+    padding-left: 100px;
+    padding-top: 40px;
+  }
+  
+  /* Like Section */
+  .like-sec {
+    background: #0090d2;
+    padding: 12px 16px;
+    width: 280px;
+    border-radius: 14px;
+    position: absolute;
+    bottom: 70px;
+    left: 120px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+  }
+  

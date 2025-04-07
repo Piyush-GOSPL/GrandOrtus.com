@@ -1,0 +1,11 @@
+
+.dropitem:hover .dropmenu-hover {
+    display: block !important;
+}
+.dropitem:hover .showme {
+    display: block !important;
+}
+
+.solution{
+    left: -33px;
+}

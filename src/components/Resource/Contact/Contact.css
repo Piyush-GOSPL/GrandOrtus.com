@@ -1,0 +1,9 @@
+.line::after{
+    content: "";
+    width: 5px;
+    height: 10px;
+    position: absolute;
+    color: red;
+    
+
+}

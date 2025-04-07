@@ -1,0 +1,17 @@
+.rectangle-1 {
+z-index: 99;
+}
+
+.rectangle-2 {
+    transform: translate3d(-48%, -35%, 0);
+    z-index: 999;
+}
+.rectangle-3 {
+    transform: translate3d(45%, -115%, 0px);
+    z-index: 9;
+}
+
+.rectangle-4 {
+    transform: translate3d(0, -134%, 0);
+
+}
