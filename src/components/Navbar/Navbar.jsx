@@ -112,8 +112,7 @@ const Navbar = ({onGetQuoteClick}) => {
       {/* Mobile Menu Icon */}
       <span
         className="md:hidden absolute right-8 top-6 cursor-pointer"
-        onClick={handleMenubar}
-      >
+        onClick={handleMenubar}>
         <i
           className={`fa-solid ${
             menuBar ? "fa-xmark" : "fa-bars"
@@ -140,14 +139,15 @@ const Navbar = ({onGetQuoteClick}) => {
             </NavLink>
 
             {/* Submenu */}
+
             {menu.subNavBar && (
               <ul
-                className={`absolute left-0 top-full hidden group-hover:block bg-white rounded-md py-2 ${
-                  menu.isCustomNavbar ? "w-full flex" : "w-50"
+                className={`absolute left-0 reletive top-full hidden group-hover:block bg-white rounded-md py-2 ${
+                  menu.isCustomNavbar ? "w-full flex" : "w-60"
                 }`}
               >
                 {menu.isCustomNavbar ? (
-                  <div className="flex w-[600px] p-4 bg-white shadow-md rounded-md">
+                  <div className="flex w-[754px] left-[-200px] top-0 absolute p-4 bg-white shadow-md rounded-md">
                     {menu.subNavBar.map((submenuCategory, subIndex) => (
                       <div key={subIndex} className=" px-2">
                         <h3 className="font-bold text-gray-700">
@@ -157,7 +157,7 @@ const Navbar = ({onGetQuoteClick}) => {
                           {submenuCategory.submenu.map((submenuItem, i) => (
                             <li
                               key={i}
-                              className="px-1 py-1 hover:bg-[#0090d2] hover:text-white"
+                              className="px-1 py-1 text-lg text-[18px] text-[#575757] hover:bg-[#0090d2] hover:text-white"
                             >
                               <NavLink to={submenuItem.url}>
                                 {submenuItem.label}
@@ -178,7 +178,7 @@ const Navbar = ({onGetQuoteClick}) => {
 
                       {/* Nested Dropdown */}
                       {subMenu.dropdown && (
-                        <ul className="absolute left-full top-0 hidden showme bg-white shadow-md rounded-md w-48 py-2">
+                        <ul className="absolute left-full top-0 hidden showme bg-white shadow-md rounded-md w-70 py-2">
                           {subMenu.dropdown.map((dropItem, i) => (
                             <li
                               key={i}
