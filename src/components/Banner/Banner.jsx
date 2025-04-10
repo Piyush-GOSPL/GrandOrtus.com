@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -9,7 +10,8 @@ const Banner = () => {
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover">
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      >
         <source src="/assets/BannerVideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -25,12 +27,15 @@ const Banner = () => {
           Unlocking the power of technology <br /> for your success
         </h1>
         <p className="text-lg mb-2">
-          <span className="">Grand </span> Ortus Solutions Pvt Ltd is a system integrator
+          <span className="">Grand </span> Ortus Solutions Pvt Ltd is a system
+          integrator
         </p>
         <div className="flex justify-center">
-          <button className="bg-[#0092D6] text-white font-semibold py-1 px-2 rounded-lg hover:bg-white hover:text-[#0092D6] transition border-2 border-[#0092D6]">
-            Read More
-          </button>
+          <Link to="/About" className="cursor-pointer">
+            <button className="bg-[#0092D6] cursor-pointer text-white font-semibold py-1 px-2 rounded-lg hover:bg-white hover:text-[#0092D6] transition border-2 border-[#0092D6]">
+              Read More
+            </button>
+          </Link>
         </div>
       </div>
     </div>

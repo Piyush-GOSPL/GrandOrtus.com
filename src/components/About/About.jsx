@@ -1,9 +1,14 @@
 import React from "react";
+import { FaUsers, FaHandshake, FaPhone } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
     <>
-      <section className="relative w-full h-[80vh] flex items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('/assets/aboutBanner.svg')] ">
+      <section
+        className="relative w-full h-[80vh] flex items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('/assets/aboutBanner.svg')] "
+        id="about"
+      >
         {/* <div className="absolute inset-0 bg-black/50"></div> */}
 
         <div className="relative z-10 text-center text-white px-6">
@@ -25,17 +30,29 @@ const About = () => {
           backgroundRepeat: "no-repeat, no-repeat",
         }}
       >
-        <div className="bg-[#0090d2] p-6 rounded-[40px] shadow-lg w-[250px] text-center text-white">
-          <p className="text-lg font-semibold">Clients</p>
-        </div>
+        <Link to="/Clients">
+          <div className="bg-[#0090d2] p-6 rounded-[40px] shadow-lg w-[250px] text-center text-white flex flex-col justy items-center shadow hover:scale-105 transition-all duration-300 cursor-pointer">
+            <FaUsers className="text-2xl mb-2" />
 
-        <div className="bg-[#0090d2] p-6 rounded-[40px] shadow-lg w-[250px] text-center text-white">
-          <p className="text-lg font-semibold">Partners</p>
-        </div>
+            <p className="text-lg font-semibold">Clients</p>
+          </div>
+        </Link>
 
-        <div className="bg-[#0090d2] p-6 rounded-[40px] shadow-lg w-[250px] text-center text-white">
-          <p className="text-lg font-semibold">Contact US</p>
-        </div>
+        <Link to="/Partners">
+          <div className="bg-[#0090d2] p-6 rounded-[40px] shadow-lg w-[250px] text-center text-white flex flex-col justy items-center shadow hover:scale-105 transition-all duration-300 cursor-pointer">
+            <FaHandshake className="text-2xl mb-2" />
+
+            <p className="text-lg font-semibold">Partners</p>
+          </div>
+        </Link>
+
+        <Link to="/Contact">
+          <div className="bg-[#0090d2] p-6 rounded-[40px] shadow-lg w-[250px] text-center text-white flex flex-col justy items-center shadow hover:scale-105 transition-all duration-300 cursor-pointer">
+            <FaPhone className="text-2xl mb-2" />
+
+            <p className="text-lg font-semibold">Contact US</p>
+          </div>
+        </Link>
       </div>
 
       <div className="flex flex-col lg:flex-row items-center mx-auto px-6 lg:px-20 py-10">
@@ -78,7 +95,7 @@ const About = () => {
         <div className="p-6  mt-4 max-w-3xl w-full">
           <h2 className="text-xl text-[#0090d2] my-3">Spirit of GrandOrtus</h2>
           <p className="text-lg text-gray-700 mt-3 leading-relaxed">
-            {" "}
+          
             These values are our bedrock. They define and make us. Our character
             and destinies are energized by our values. It thrives on
             transforming ideas into reality, ensuring seamless digital

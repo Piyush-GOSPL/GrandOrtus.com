@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Navigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { Routes, Route } from "react-router-dom";
@@ -48,7 +49,8 @@ const Resource = () => {
       
 
       <Routes>
-        <Route path="Home" element={<Home />} />
+      <Route path="/" element={<Navigate to="/Home" />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Blogs" element={<Blogs />} />
         <Route path="/CaseStudy" element={<CaseStudy />} />

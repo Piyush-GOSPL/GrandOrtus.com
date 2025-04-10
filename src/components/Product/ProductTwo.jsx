@@ -1,7 +1,8 @@
 import React from "react";
 
 const ProductTwo = () => {
-  return (
+  return ( 
+
     <section className="w-full">
 
       {/* Hero Section */}

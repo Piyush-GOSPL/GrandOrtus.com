@@ -6,37 +6,37 @@ const ProductOne = () => {
       title: "Device Administration",
       description:
         "Utilize the RADIUS security protocol to improve access control flows, allowing better security and visibility. Network devices are authenticated and authorized, while logs are collected via NetSight/NMS, with accounting messages logged for tracking.",
-      icon: "/assets/icons/device-admin.png",
+      icon: "/assets/device-admin.png",
     },
     {
       title: "Guest and Secure Wireless",
       description:
         "Enables secure network access for visitors, contractors, consultants, and business meetings. Issued via guest portals. Custom page settings for different guest types can be crafted, with role-based access managed through guest accounts.",
-      icon: "/assets/icons/guest-wireless.png",
+      icon: "/assets/guest-wireless.png",
     },
     {
       title: "(BYOD) Bring your Own Devices",
       description:
         "Allows employees and guests to connect their own personal and business devices to the enterprise network via self-configuration portals and various predefined authentications.",
-      icon: "/assets/icons/byod.png",
+      icon: "/assets/byod.png",
     },
     {
       title: "Asset Availability",
       description:
         "Provides continuous visibility and control over network assets like end-user devices, wireless, wired, and VPN connections.",
-      icon: "/assets/icons/asset-availability.png",
+      icon: "/assets/asset-availability.png",
     },
     {
       title: "Secure Access",
       description:
         "Utilize various authentication protocols like 802.1X, RADIUS, and MAC to ensure secure network access for devices and endpoints.",
-      icon: "/assets/icons/secure-access.png",
+      icon: "/assets/secure-access.png",
     },
     {
       title: "Universal Devices Compatibility",
       description:
         "Supports compatibility across all operating systems and device types, including Windows, MacOS, iOS, Android, printers, scanners, and other headless IoT devices.",
-      icon: "/assets/icons/device-compatibility.png",
+      icon: "/assets/device-compatibility.png",
     },
   ];
 

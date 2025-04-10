@@ -10,21 +10,21 @@ const Blogs = () => {
       redmore: "Read More",
     },
     {
-      img_url: "/assets/window.svg",
+      img_url: "/assets/Future.svg",
 
       title: `Window vs. Linux:
               Unravelling the Battle of Operating System`,
       redmore: "Read More",
     },
     {
-      img_url: "/assets/window.svg",
+      img_url: "/assets/TheTransformative.svg",
 
       title: `Window vs. Linux:
               Unravelling the Battle of Operating System`,
       redmore: "Read More",
     },
     {
-      img_url: "/assets/window.svg",
+      img_url: "/assets/TheCybersecurity.svg",
 
       title: `Window vs. Linux:
               Unravelling the Battle of Operating System`,
@@ -41,8 +41,7 @@ const Blogs = () => {
         {card.map((cards, index) => (
           <div
             key={index}
-            className=" flex flex-col p-4 rounded-lg items-center border-[1px] border-[#E6E6E6] min-h-60 shadow-md transition hover:shadow-lg bg-white "
-          >
+            className=" flex flex-col p-4 rounded-lg items-center border-[1px] border-[#E6E6E6] min-h-60 shadow-md transition hover:shadow-lg bg-white ">
             <img
               src={cards.img_url}
               alt=""

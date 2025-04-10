@@ -30,7 +30,7 @@ const FeedBack = () => {
       </div>
     </div>
   </section>
-  
+
   );
 };
 

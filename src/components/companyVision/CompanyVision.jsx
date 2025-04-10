@@ -1,5 +1,6 @@
 import React from "react";
 import "./CompanyVison.css";
+import { Link } from "react-router-dom";
 
 const CompanyVision = () => {
   return (
@@ -28,9 +29,12 @@ const CompanyVision = () => {
         </p>
 
         {/* About Button */}
-        <button className="bg-[#575757] px-6 py-3 text-white my-6 transition-all duration-300 hover:bg-white hover:text-[#0090d2] border-2 border-[#575757]">
+        <Link to="/About" className="cursor-pointer">
+        
+        <button className="bg-[#575757] cursor-pointer px-6 py-3 text-white my-6 transition-all duration-300 hover:bg-white hover:text-[#0090d2] border-2 border-[#575757]">
           ABOUT COMPANY
         </button>
+        </Link>
 
         {/* Rating Section */}
         <div className="flex gap-4 items-center">

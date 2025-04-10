@@ -2,16 +2,18 @@ import React from "react";
 import "../Clients/Clients.css";
 
 const Clients = () => {
-
-    const clientsImages = Array.from({length:18},(_,i)=> `assets/clients/Picture${i+46}.png`);
+  const clientsImages = Array.from(
+    { length: 18 },
+    (_, i) => `assets/clients/Picture${i + 46}.png`
+  );
   return (
     <section className="">
       <div className="Client-bannerimg w-full flex justify-center items-center h-[80dvh] bg-cover bg-center bg-no-repeat bg-[url(/assets/Clientbanner.svg)]">
         <div className="text-center max-w-2xl">
-          <h1 className="text-[#0090d2] text-2xl md:text-4xl font-semibold">
+          <h1 className="text-[#fff] text-2xl md:text-4xl font-semibold">
             Clients
           </h1>
-          <p className="text-[#0090d2] text-lg md:text-xl mt-2 font-medium">
+          <p className="text-[#fff] text-lg md:text-xl mt-2 font-medium">
             "We’re grateful for your trust and thrilled to contribute to your
             success - your happiness is our top priority!"
           </p>
@@ -32,19 +34,23 @@ const Clients = () => {
             success.
           </p>
           <br />
-         <div className="text-gray-700 text-base md:text-lg mt-4">
+          <div className="text-gray-700 text-base md:text-lg mt-4">
             <ul className="list-disc pl-5 ">
               <li>
-              Your satisfaction is our top priority, and we are here to deliver exceptional service every step of the way.
+                Your satisfaction is our top priority, and we are here to
+                deliver exceptional service every step of the way.
               </li>
               <li>
-              We understand your needs and are committed to providing tailored solutions that meet your expectations.
+                We understand your needs and are committed to providing tailored
+                solutions that meet your expectations.
               </li>
               <li>
-              Our team is dedicated to ensuring that your experience with us is seamless and rewarding.
+                Our team is dedicated to ensuring that your experience with us
+                is seamless and rewarding.
               </li>
               <li>
-              We value your trust and aim to exceed your expectations with every project we take on.
+                We value your trust and aim to exceed your expectations with
+                every project we take on.
               </li>
             </ul>
           </div>
@@ -52,13 +58,18 @@ const Clients = () => {
       </div>
 
       <div className="w-full p-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
-  {clientsImages.map((img, index) => (
-    <div key={index} className="flex items-center justify-center p-4 bg-white shadow-md rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
-      <img src={img} alt={`Client ${index + 1}`} className="w-24 md:w-32 lg:w-40 h-auto object-contain" />
-    </div>
-  ))}
-</div>
-
+        {clientsImages.map((img, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-center p-4 bg-white shadow-md rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+            <img
+              src={img}
+              alt={`Client ${index + 1}`}
+              className="w-24 md:w-32 lg:w-40 h-auto object-contain"
+            />
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
