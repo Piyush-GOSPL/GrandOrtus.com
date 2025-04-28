@@ -39,6 +39,7 @@ import Model from "../Model";
 import ZeroTrust from "../Solution/ZeroTrust";
 import ProductOne from "../Product/ProductOne";
 import ProductTwo from "../Product/ProductTwo";
+import ApplyPage from "./CurrentOpnings/ApplyPage";
 
 
 const Resource = () => {
@@ -57,6 +58,7 @@ const Resource = () => {
         <Route path="/AwardsandCertification"element={<AwardsandCertification />}/>
         <Route path="/LifeGrandOrtus" element={<LifeGrandOrtus />} />
         <Route path="/CurrentOpenings" element={<CurrentOpenings />} />
+        <Route path="/apply" element={<ApplyPage />} />
         <Route path="/CSR" element={<CSR />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Clients" element={<Clients />} />

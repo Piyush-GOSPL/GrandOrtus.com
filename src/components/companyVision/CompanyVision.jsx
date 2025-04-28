@@ -7,11 +7,13 @@ const CompanyVision = () => {
     <section className="w-full md:p-20 p-5 flex md:flex-row flex-col justify-center md:gap-20 gap-5 bg-[#C5DEE9]">
       {/* Left Image Section */}
       <div className="md:w-[50%] w-full flex flex-col items-center">
-        <img src="./assets/Rectangle-2.svg" alt="" className="rectangle-1 animate-zoom" />
-        <img src="./assets/Rectangle-1.svg" alt="" className="rectangle-2 animate-zoom" />
-        <img src="./assets/Rectangle-3.svg" alt="" className="rectangle-3 animate-zoom" />
-        <img src="./assets/Rectangle-4.svg" alt="" className="rectangle-4 animate-zoom" />
-      </div>
+  <img src="./assets/Rectangle-2.svg" alt="" className="rectangle-1 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[9999]" />
+  <img src="./assets/Rectangle-1.svg" alt="" className="rectangle-2 animate-zoom transition-transform duration-300 hover:scale-125 " />
+  <img src="./assets/Rectangle-3.svg" alt="" className="rectangle-3 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[9999]" />
+  <img src="./assets/Rectangle-4.svg" alt="" className="rectangle-4 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[9999]" />
+ </div>
+
+
 
       {/* Right Content Section */}
       <div className="md:w-[50%] w-full">
@@ -41,7 +43,7 @@ const CompanyVision = () => {
           <div className="text-[24px] font-bold text-[#0090d2]">5.0</div>
           <div className="border-l-2 border-[#575757] pl-4">
             <div className="flex gap-1">
-              <img src="./assets/star 1.svg" alt="Star" className="w-5 h-5" />
+              <img src="./assets/star 1.svg" alt="Star" className="w-5 h-5 " />
               <img src="./assets/star 1.svg" alt="Star" className="w-5 h-5" />
               <img src="./assets/star 1.svg" alt="Star" className="w-5 h-5" />
               <img src="./assets/star 1.svg" alt="Star" className="w-5 h-5" />

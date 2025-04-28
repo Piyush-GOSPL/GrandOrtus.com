@@ -12,27 +12,77 @@ const Model = ({ show, onClose }) => {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
-  const validate = () => {
-    const newErrors = {};
-    if (!formData.name.trim()) newErrors.name = 'Name is required.';
-    if (!formData.number || !/^\d{10,}$/.test(formData.number)) newErrors.number = 'Valid number is required.';
-    if (!formData.email || !/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = 'Valid email is required.';
-    if (!formData.service) newErrors.service = 'Please select a service.';
-    if (!formData.message.trim()) newErrors.message = 'Message cannot be empty.';
-    return newErrors;
+  const validateField = (name, value) => {
+    let error = '';
+
+    switch (name) {
+      case 'name':
+        if (!value.trim()) {
+          error = 'Name is required.';
+        } else if (!/^[a-zA-Z\s]{2,50}$/.test(value.trim())) {
+          error = 'Name must contain only letters and spaces (2-50 characters).';
+        }
+        break;
+
+      case 'number':
+        if (!value.trim()) {
+          error = 'Number is required.';
+        } else if (!/^\d{10,15}$/.test(value.trim())) {
+          error = 'Number must be between 10 and 15 digits.';
+        }
+        break;
+
+      case 'email':
+        if (!value.trim()) {
+          error = 'Email is required.';
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())) {
+          error = 'Please enter a valid email address.';
+        }
+        break;
+
+      case 'service':
+        if (!value) {
+          error = 'Please select a service.';
+        }
+        break;
+
+      case 'message':
+        if (!value.trim()) {
+          error = 'Message cannot be empty.';
+        } else if (value.trim().length < 10) {
+          error = 'Message must be at least 10 characters long.';
+        }
+        break;
+
+      default:
+        break;
+    }
+
+    setErrors((prev) => ({ ...prev, [name]: error }));
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+
+    if (errors[name]) {
+      validateField(name, value); // clear error in real-time
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const validationErrors = validate();
-    setErrors(validationErrors);
 
-    if (Object.keys(validationErrors).length === 0) {
+    const newErrors = {};
+    Object.entries(formData).forEach(([name, value]) => {
+      validateField(name, value);
+      const error = validateSingleField(name, value);
+      if (error) newErrors[name] = error;
+    });
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
       try {
         const response = await fetch('http://127.0.0.1:8000/api/sendmail/', {
           method: 'POST',
@@ -53,6 +103,7 @@ const Model = ({ show, onClose }) => {
             service: '',
             message: '',
           });
+          setErrors({});
         } else {
           alert('Failed to send email.');
         }
@@ -61,6 +112,55 @@ const Model = ({ show, onClose }) => {
         alert('Error sending email.');
       }
     }
+  };
+
+  const validateSingleField = (name, value) => {
+    let error = '';
+
+    switch (name) {
+      case 'name':
+        if (!value.trim()) {
+          error = 'Name is required.';
+        } else if (!/^[a-zA-Z\s]{2,50}$/.test(value.trim())) {
+          error = 'Name must contain only letters and spaces (2-50 characters).';
+        }
+        break;
+
+      case 'number':
+        if (!value.trim()) {
+          error = 'Number is required.';
+        } else if (!/^\d{10,10}$/.test(value.trim())) {
+          error = 'Number must be between 10 and 15 digits.';
+        }
+        break;
+
+      case 'email':
+        if (!value.trim()) {
+          error = 'Email is required.';
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())) {
+          error = 'Please enter a valid email address.';
+        }
+        break;
+
+      case 'service':
+        if (!value) {
+          error = 'Please select a service.';
+        }
+        break;
+
+      case 'message':
+        if (!value.trim()) {
+          error = 'Message cannot be empty.';
+        } else if (value.trim().length < 10) {
+          error = 'Message must be at least 10 characters long.';
+        }
+        break;
+
+      default:
+        break;
+    }
+
+    return error;
   };
 
   return (
@@ -80,6 +180,7 @@ const Model = ({ show, onClose }) => {
                 placeholder="User Name"
                 value={formData.name}
                 onChange={handleChange}
+                onBlur={(e) => validateField(e.target.name, e.target.value)}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
               />
               {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
@@ -87,11 +188,12 @@ const Model = ({ show, onClose }) => {
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="w-full md:w-1/2">
                   <input
-                    type="number"
+                    type="phone"
                     name="number"
                     placeholder="Number"
                     value={formData.number}
                     onChange={handleChange}
+                    onBlur={(e) => validateField(e.target.name, e.target.value)}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
                   />
                   {errors.number && <p className="text-red-500 text-sm">{errors.number}</p>}
@@ -104,6 +206,7 @@ const Model = ({ show, onClose }) => {
                     placeholder="Email"
                     value={formData.email}
                     onChange={handleChange}
+                    onBlur={(e) => validateField(e.target.name, e.target.value)}
                     className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
                   />
                   {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
@@ -114,6 +217,7 @@ const Model = ({ show, onClose }) => {
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
+                onBlur={(e) => validateField(e.target.name, e.target.value)}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
               >
                 <option value="" disabled>
@@ -135,6 +239,7 @@ const Model = ({ show, onClose }) => {
                 placeholder="Message"
                 value={formData.message}
                 onChange={handleChange}
+                onBlur={(e) => validateField(e.target.name, e.target.value)}
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
               />
               {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
