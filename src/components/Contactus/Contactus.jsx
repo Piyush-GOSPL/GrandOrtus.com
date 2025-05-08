@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
+// import Token from "../Contactus/Token"
 
 const Contactus = () => {
   const [formData, setFormData] = useState({
@@ -10,12 +12,11 @@ const Contactus = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [captchaToken, setCaptchaToken] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-
-    // Instant field validation
     setErrors((prevErrors) => ({ ...prevErrors, [name]: validateField(name, value) }));
   };
 
@@ -36,6 +37,10 @@ const Contactus = () => {
     }
   };
 
+  const handleCaptchaChange = (token) => {
+    setCaptchaToken(token);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const newErrors = {};
@@ -45,11 +50,15 @@ const Contactus = () => {
       if (error) newErrors[key] = error;
     });
 
+    if (!captchaToken) {
+      newErrors.captcha = 'Please verify that you are not a robot.';
+    }
+
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      // Form is valid
-      alert('Form is valid! Ready to submit.');
+      alert('Form is valid and CAPTCHA verified! Ready to submit.');
+      // Submit logic here (e.g., API call)
     }
   };
 
@@ -80,7 +89,7 @@ const Contactus = () => {
             <div className="flex flex-col md:flex-row gap-4">
               <div className="w-full md:w-1/2">
                 <input
-                  type="phone"
+                  type="tel"
                   name="number"
                   placeholder="Number"
                   value={formData.number}
@@ -136,9 +145,17 @@ const Contactus = () => {
               {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
             </div>
 
+            <div className="flex justify-center">
+              <ReCAPTCHA
+                sitekey="6Lc_TTIrAAAAACuJKo7gvfuxfzN-qtxXwock01dt"
+                onChange={handleCaptchaChange}
+              />
+            </div>
+            {errors.captcha && <p className="text-red-500 text-sm text-center">{errors.captcha}</p>}
+
             <button
               type="submit"
-              className="w-full md:w-1/3 bg-blue-500 border border-blue-500 text-white p-3 rounded-lg text-center hover:bg-white hover:text-blue-500"
+              className="w-full md:w-1/3 bg-blue-500 border border-blue-500 text-white p-3 rounded-lg text-center hover:bg-white hover:text-blue-500 cursor-pointer"
             >
               Submit
             </button>

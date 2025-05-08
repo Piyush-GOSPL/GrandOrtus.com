@@ -7,7 +7,7 @@ const CompanyVision = () => {
     <section className="w-full md:p-20 p-5 flex md:flex-row flex-col justify-center md:gap-20 gap-5 bg-[#C5DEE9]">
       {/* Left Image Section */}
       <div className="md:w-[50%] w-full flex flex-col items-center">
-  <img src="./assets/Rectangle-2.svg" alt="" className="rectangle-1 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[9999]" />
+  <img src="./assets/Rectangle-2.svg" alt="" className="rectangle-1 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[]" />
   <img src="./assets/Rectangle-1.svg" alt="" className="rectangle-2 animate-zoom transition-transform duration-300 hover:scale-125 " />
   <img src="./assets/Rectangle-3.svg" alt="" className="rectangle-3 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[9999]" />
   <img src="./assets/Rectangle-4.svg" alt="" className="rectangle-4 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[9999]" />

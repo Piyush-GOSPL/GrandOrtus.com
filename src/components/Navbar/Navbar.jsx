@@ -178,7 +178,7 @@ const Navbar = ({onGetQuoteClick}) => {
 
                       {/* Nested Dropdown */}
                       {subMenu.dropdown && (
-                        <ul className="absolute left-full top-0 hidden showme bg-white shadow-md rounded-md w-70 py-2">
+                        <ul className="absolute left-full top-[-8px] hidden showme bg-white shadow-md rounded-md w-70 py-2">
                           {subMenu.dropdown.map((dropItem, i) => (
                             <li
                               key={i}

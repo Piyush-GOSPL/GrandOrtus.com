@@ -11,8 +11,7 @@ export const getPosts = async () => {
   
       const data = await response.json();
   
-      // Uncomment the next line if your API response has a `results` key:
-      // return data.results;
+     
   
       return data; // use this if data is already an array
     } catch (error) {

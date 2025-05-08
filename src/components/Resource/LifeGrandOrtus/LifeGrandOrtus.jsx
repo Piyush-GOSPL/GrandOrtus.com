@@ -22,38 +22,46 @@ const LifeGrandOrtus = () => {
 
   return (
     <section className="w-full mx-auto">
+      {/* Banner Section */}
       <div className="h-[50dvh] bg-no-repeat bg-cover bg-center flex justify-center items-center bg-[url('/assets/LifeBanner.svg')]">
         <h1 className="text-white text-3xl font-bold">Life@Grand Ortus</h1>
       </div>
 
+      {/* Carousel Section */}
       <div className="bg-no-repeat bg-center bg-cover bg-[url('/assets/lifebgimg.svg')] py-10 px-5 flex justify-center items-center">
         <div className="w-full">
           <OwlCarousel className="owl-theme" {...options}>
-            <div className="item p-4">
-              <img
-                src="/assets/LifeGrand Ortus1.jpg"
-                alt="Life at Grand Ortus 1"
-                className="w-full rounded-lg shadow-lg"
-              />
-            </div>
-            <div className="item p-4">
-              <img
-                src="/assets/LifeGrand Ortus2.jpg"
-                alt="Life at Grand Ortus 2"
-                className="w-full rounded-lg shadow-lg"
-              />
-            </div>
-            <div className="item p-4">
-              <img
-                src="/assets/LifeGrand Ortus3.jpg"
-                alt="Life at Grand Ortus 3"
-                className="w-full rounded-lg shadow-lg"
-              />
-            </div>
+            {["1", "2", "3"].map((num) => (
+              <div key={num} className="item p-4">
+                <img
+                  src={`/assets/LifeGrand Ortus${num}.jpg`}
+                  alt={`Life at Grand Ortus ${num}`}
+                  className="w-full rounded-lg shadow-lg"
+                />
+              </div>
+            ))}
           </OwlCarousel>
         </div>
       </div>
 
+      {/* 👇 Video Section */}
+      <div className="w-full py-10 px-5 bg-[#f4f4f4] flex flex-col items-center">
+        <h2 className="text-3xl font-bold text-[#333] mb-6">
+          A Glimpse into Our Culture
+        </h2>
+        <div className="w-full max-w-4xl aspect-video rounded-lg overflow-hidden shadow-xl">
+          <video
+            controls
+            className="w-full h-full object-cover"
+            poster="/assets/video-thumbnail.jpg"
+          >
+            <source src="/assets/lifeatgrandortus.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      {/* Culture Highlights */}
       <div className="bg-[radial-gradient(31.01%_50%_at_50%_50%,rgba(217,217,217,0.18)_0%,rgba(115,115,115,0.1458)_99.5%)] pt-10">
         <div className="bg-no-repeat bg-center bg-cover bg-[url('/assets/Culture.svg')] p-15 my-20 ">
           <h1 className="text-center text-2xl text-white mt-[-36px]">
@@ -114,6 +122,7 @@ const LifeGrandOrtus = () => {
         </div>
       </div>
 
+      {/* Testimonials Section */}
       <div className="w-full p-10 mx-auto bg-[#0090d2] my-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-10 ">
           {[
