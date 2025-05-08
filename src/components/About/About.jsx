@@ -1,7 +1,7 @@
 import React from "react";
 import { FaUsers, FaHandshake, FaPhone } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Banner from '../Banner/Banner'
+// import Banner from '../Banner/Banner'
 
 const About = () => {
   return (

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-// import Token from "../Contactus/Token"
 
 const Contactus = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +12,7 @@ const Contactus = () => {
 
   const [errors, setErrors] = useState({});
   const [captchaToken, setCaptchaToken] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,9 +39,10 @@ const Contactus = () => {
 
   const handleCaptchaChange = (token) => {
     setCaptchaToken(token);
+    setErrors((prevErrors) => ({ ...prevErrors, captcha: '' }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = {};
 
@@ -57,8 +58,37 @@ const Contactus = () => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      alert('Form is valid and CAPTCHA verified! Ready to submit.');
-      // Submit logic here (e.g., API call)
+      setIsSubmitting(true);
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/sendmail/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          alert('Email sent!');
+          setFormData({
+            name: '',
+            number: '',
+            email: '',
+            service: '',
+            message: '',
+          });
+          setCaptchaToken(null);
+        } else {
+          alert('Failed to send email.');
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Error sending email.');
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -155,9 +185,12 @@ const Contactus = () => {
 
             <button
               type="submit"
-              className="w-full md:w-1/3 bg-blue-500 border border-blue-500 text-white p-3 rounded-lg text-center hover:bg-white hover:text-blue-500 cursor-pointer"
+              disabled={isSubmitting}
+              className={`w-full md:w-1/3 bg-blue-500 border border-blue-500 text-white p-3 rounded-lg text-center hover:bg-white hover:text-blue-500 cursor-pointer ${
+                isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
             >
-              Submit
+              {isSubmitting ? 'Submitting...' : 'Submit'}
             </button>
           </form>
         </div>
