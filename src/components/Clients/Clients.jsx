@@ -8,7 +8,7 @@ const Clients = () => {
   );
   return (
     <section className="">
-      <div className="Client-bannerimg w-full flex justify-center items-center h-[80dvh] bg-cover bg-center bg-no-repeat bg-[url(/assets/Clientbanner.svg)]">
+      <div className="Client-bannerimg w-full flex justify-center items-center h-[70dvh] bg-cover bg-center bg-no-repeat bg-[url(/assets/Clientbanner.svg)]">
         <div className="text-center max-w-2xl">
           <h1 className="text-[#0090d2] text-2xl md:text-4xl font-semibold">
             Clients

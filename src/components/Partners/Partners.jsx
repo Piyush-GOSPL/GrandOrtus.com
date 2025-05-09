@@ -8,7 +8,7 @@ const Partners = () => {
   );
   return (
     <section className="w-full mx-auto  my-5">
-      <div className="Partner-bannerimg flex justify-center items-center h-[80dvh] bg-cover bg-center bg-no-repeat bg-[url(/assets/Partnerbannerimg.svg)]">
+      <div className="Partner-bannerimg flex justify-center items-center h-[70dvh] bg-cover bg-center bg-no-repeat bg-[url(/assets/Partnerbannerimg.svg)]">
         <div className="">
           <h1 className="text-[#0090d2] text-2xl md:text-4xl font-semibold text-center">
             OUR PARTNERS

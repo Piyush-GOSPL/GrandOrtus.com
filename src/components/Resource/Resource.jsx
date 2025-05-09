@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, Router } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { Routes, Route } from "react-router-dom";
@@ -40,6 +40,7 @@ import ZeroTrust from "../Solution/ZeroTrust";
 import ProductOne from "../Product/ProductOne";
 import ProductTwo from "../Product/ProductTwo";
 import ApplyPage from "./CurrentOpnings/ApplyPage";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 
 
 const Resource = () => {
@@ -47,7 +48,6 @@ const Resource = () => {
   return (
     <section className="w-full pb-0 ">
       <Navbar onGetQuoteClick={() => setShowModal(true)} />
-
       <Routes>
       <Route path="/" element={<Navigate to="/Home" />} />
         <Route path="/Home" element={<Home />} />
