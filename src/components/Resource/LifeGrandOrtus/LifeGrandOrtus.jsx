@@ -111,10 +111,10 @@ const LifeGrandOrtus = () => {
                 alt={item.title}
                 className="w-16 h-16 mx-auto"
               />
-              <h1 className="text-3xl text-[#575757] font-medium p-2">
+              <h1 className="text-[20px] text-[#575757] font-medium p-2">
                 {item.title}
               </h1>
-              <p className="text-2xl text-[#575757]  px-5">
+              <p className="text-[18px] text-[#575757]  px-5">
                 {item.description}
               </p>
             </div>

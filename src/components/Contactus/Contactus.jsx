@@ -65,7 +65,9 @@ const Contactus = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            ...formData,
+            captcha: captchaToken,}),
         });
 
         const result = await response.json();
@@ -188,8 +190,7 @@ const Contactus = () => {
               disabled={isSubmitting}
               className={`w-full md:w-1/3 bg-blue-500 border border-blue-500 text-white p-3 rounded-lg text-center hover:bg-white hover:text-blue-500 cursor-pointer ${
                 isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
-              }`}
-            >
+              }`}>
               {isSubmitting ? 'Submitting...' : 'Submit'}
             </button>
           </form>

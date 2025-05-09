@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <section
-        className="relative w-full h-[80vh] flex items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('/assets/aboutBanner.svg')] "
+        className="relative w-full h-[70vh] flex items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('/assets/aboutBanner.svg')] "
         id="about"
       >
         {/* <div className="absolute inset-0 bg-black/50"></div> */}

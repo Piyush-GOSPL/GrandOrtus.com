@@ -10,17 +10,17 @@ const Partners = () => {
     <section className="w-full mx-auto  my-5">
       <div className="Partner-bannerimg flex justify-center items-center h-[80dvh] bg-cover bg-center bg-no-repeat bg-[url(/assets/Partnerbannerimg.svg)]">
         <div className="">
-          <h1 className="text-[#fff] text-2xl md:text-4xl font-semibold text-center">
+          <h1 className="text-[#0090d2] text-2xl md:text-4xl font-semibold text-center">
             OUR PARTNERS
           </h1>
-          <p className="text-white text-lg md:text-xl mt-2 font-medium">
+          <p className="text-[#0090d2] text-lg md:text-xl mt-2 font-medium">
             "Together, we are stronger – thank you for being a valued partner in
             our shared success."
           </p>
         </div>
       </div>
 
-      <div className="w-full flex flex-col items-center px-6 py-10 bg-gray-100 mt-10  bg-gradient-to-b from-[#DAD4D4] via-[#E4E4E4] to-[#FFFFFF]">
+      <div className="w-full flex flex-col items-center px-6 py-10 mt-10">
         <div className="max-w-3xl text-center">
           <h1 className="text-[#0090d2] text-2xl md:text-3xl font-semibold capitalize">
             our partners

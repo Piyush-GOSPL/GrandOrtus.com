@@ -45,9 +45,8 @@ import ApplyPage from "./CurrentOpnings/ApplyPage";
 const Resource = () => {
   const [showModal, setShowModal] = useState(false); 
   return (
-    <section className="w-full ">
+    <section className="w-full pb-0 ">
       <Navbar onGetQuoteClick={() => setShowModal(true)} />
-      
 
       <Routes>
       <Route path="/" element={<Navigate to="/Home" />} />

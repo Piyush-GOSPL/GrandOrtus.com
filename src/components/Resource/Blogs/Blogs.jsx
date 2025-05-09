@@ -36,7 +36,7 @@ const Blogs = () => {
   ];
   return (
     <>
-      <section className="relative w-full h-[80vh] flex items-center justify-center flex-col bg-cover bg-center bg-no-repeat bg-[url('/assets/BlogBanner.svg')] ">
+      <section className="relative w-full h-[70vh] flex items-center justify-center flex-col bg-cover bg-center bg-no-repeat bg-[url('/assets/BlogBanner.svg')] ">
         <h1 className="text-white text-3xl">Blogs & Updates</h1>
         <p className="text-white text-xl mt-4">
           "Secure, scalable, and efficient—where networking meets software

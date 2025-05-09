@@ -4,16 +4,30 @@ import { Link } from "react-router-dom";
 
 const CompanyVision = () => {
   return (
-    <section className="w-full md:p-20 p-5 flex md:flex-row flex-col justify-center md:gap-20 gap-5 bg-[#C5DEE9]">
+    <section className="w-full p-5 md:pt-20 md:pr-20 md:pl-20 pb-0 flex md:flex-row flex-col justify-center md:gap-20 gap-5 bg-[#C5DEE9]">
       {/* Left Image Section */}
       <div className="md:w-[50%] w-full flex flex-col items-center">
-  <img src="./assets/Rectangle-2.svg" alt="" className="rectangle-1 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[]" />
-  <img src="./assets/Rectangle-1.svg" alt="" className="rectangle-2 animate-zoom transition-transform duration-300 hover:scale-125 " />
-  <img src="./assets/Rectangle-3.svg" alt="" className="rectangle-3 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[9999]" />
-  <img src="./assets/Rectangle-4.svg" alt="" className="rectangle-4 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[9999]" />
- </div>
-
-
+        <img
+          src="./assets/Rectangle-2.svg"
+          alt=""
+          className="rectangle-1 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[]"
+        />
+        <img
+          src="./assets/Rectangle-1.svg"
+          alt=""
+          className="rectangle-2 animate-zoom transition-transform duration-300 hover:scale-125 "
+        />
+        <img
+          src="./assets/Rectangle-3.svg"
+          alt=""
+          className="rectangle-3 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[9999]"
+        />
+        <img
+          src="./assets/Rectangle-4.svg"
+          alt=""
+          className="rectangle-4 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[9999]"
+        />
+      </div>
 
       {/* Right Content Section */}
       <div className="md:w-[50%] w-full">
@@ -32,10 +46,9 @@ const CompanyVision = () => {
 
         {/* About Button */}
         <Link to="/About" className="cursor-pointer">
-        
-        <button className="bg-[#575757] cursor-pointer px-6 py-3 text-white my-6 transition-all duration-300 hover:bg-white hover:text-[#0090d2] border-2 border-[#575757]">
-          ABOUT COMPANY
-        </button>
+          <button className="bg-[#575757] cursor-pointer px-6 py-3 text-white my-6 transition-all duration-300 hover:bg-white hover:text-[#0090d2] border-2 border-[#575757]">
+            ABOUT COMPANY
+          </button>
         </Link>
 
         {/* Rating Section */}

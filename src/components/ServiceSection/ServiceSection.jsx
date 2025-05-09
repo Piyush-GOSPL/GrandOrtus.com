@@ -92,7 +92,7 @@ const ServiceSection = () => {
       </div>
 
       {/* Service Cards Container */}
-      <div className=" grey grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-10 gap-6  bg-after-[#575757] after:content-[''] after:absolute after:w-full after:h-[200px] after:bg-gray-200 after:bottom-[20px] after:left-0 after:-z-10">
+      <div className=" grey grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-10 gap-6  bg-after-[#575757] after:content-[''] after:absolute after:w-full after:h-[200px]  after:bottom-[20px] after:left-0 after:-z-10">
         {services.map((service, index) => (
           <div
             key={index}
@@ -107,7 +107,7 @@ const ServiceSection = () => {
             </div>
 
             <div className="bg-[#0090d2] p-5 min-h-[120px]">
-              <h1 className="mt-5 text-[20px] text-center text-white">
+              <h1 className="mt-8 text-[20px] text-center text-white">
                 {service.title}
               </h1>
             </div>
@@ -121,7 +121,7 @@ const ServiceSection = () => {
         ))}
       </div>
 
-      <div className=" grey grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-10 gap-6  bg-after-[#575757] after:content-[''] after:absolute after:w-full after:h-[200px] after:bg-gray-200 after:bottom-[20px] after:left-0 after:-z-10">
+      <div className="grey grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-10 gap-6  bg-after-[#575757] after:content-[''] after:absolute after:w-full after:h-[200px]  after:bottom-[20px] after:left-0 after:-z-10">
         {Servicetwo.map((Servicetwo, index) => (
 
           <div
@@ -132,7 +132,7 @@ const ServiceSection = () => {
             </div>
 
             <div className="bg-[#0090d2] p-5 min-h-[120px]">
-              <h1 className="mt-5 text-[20px] text-center text-white">
+              <h1 className="mt-8 text-[20px] text-center text-white">
                 {Servicetwo.title}
               </h1>
             </div>

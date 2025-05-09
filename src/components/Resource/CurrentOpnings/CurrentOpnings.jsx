@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { getPosts } from './api';
-import { useNavigate } from "react-router-dom"; // 👈 import navigate
+import { useNavigate } from "react-router-dom";  
 
 const CurrentOpenings = () => {
   const [jobs, setJobs] = useState([]);
-  const navigate = useNavigate(); // 👈
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     getPosts().then((data) => {
@@ -13,10 +13,14 @@ const CurrentOpenings = () => {
   }, []);
 
   const handleApplyClick = (job) => {
-    navigate('/apply', { state: { job } }); // 👈 pass job details
+    navigate('/apply', { state: { job } });  
   };
 
   return (
+    <section>
+    <div className="w-full h-[50dvh]  bg-no-repeat bg-corver bg-center flex justify-center items-center bg-[url('/assets/job.jpg')]">
+  {/* <h1 className="text-white text-3xl font-bold">Life@Grand Ortus</h1> */}
+</div>
     <div className="w-full min-h-screen bg-gray-100 py-12 px-6">
       <div className="max-w-6xl mx-auto text-center mt-20">
         <h1 className="text-3xl font-bold text-gray-800">Current Openings</h1>
@@ -34,14 +38,12 @@ const CurrentOpenings = () => {
                 <p className="text-gray-700"><span className="font-semibold"> 📝 Description:</span> {job.jobDescription}</p>
                 <p className="text-gray-700"><span className="font-semibold"> 📅 Valid Through:</span> {job.validThroughDate}</p>
 
-                {/* 🛠️ Updated Button */}
+               
                 <button
                   onClick={() => handleApplyClick(job)}
-                  className="mt-4 bg-blue-600 text-white px-4 py-2 cursor-pointer rounded hover:bg-blue-700 transition"
-                >
+                  className="mt-4 bg-blue-600 text-white px-4 py-2 cursor-pointer rounded hover:bg-blue-700 transition">
                   Apply Now
                 </button>
-
               </div>
             ))
           ) : (
@@ -50,6 +52,7 @@ const CurrentOpenings = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

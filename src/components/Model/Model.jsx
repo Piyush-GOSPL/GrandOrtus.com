@@ -157,7 +157,9 @@ const Model = ({ show, onClose }) => {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            ...formData,
+            captcha: recaptchaToken,}),
         });
 
         const result = await response.json();
