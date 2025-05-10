@@ -1,17 +1,14 @@
 import React from "react";
+import HeroSection from "../HeroSection/HeroSection";
 
 const HealthcareIndustry = () => {
   return (
     <section className="w-full">
       {/* Header Section */}
-      <div className="w-full h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('/assets/HealthcareIndustry.svg')] flex flex-col justify-center items-center text-white text-center px-6">
-        <h1 className="text-4xl font-bold">Healthcare Industry</h1>
-        <p className="text-lg mt-2">
-          Innovate and scale with smart IT solutions to transform the healthcare
-          industry.
-        </p>
-      </div>
-
+     
+      <HeroSection heading="Healthcare Industry" subHeading="Innovate and scale with smart IT solutions to transform the healthcare
+          industry."/>
+          
       {/* Technology Benefits Section */}
       <div className="w-full py-12 bg-[#0A76A8] md:my-20 ">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-6 ">

@@ -47,7 +47,7 @@ const OnDemandEconomy = () => {
       </div>
 
       {/* Info Section */}
-      <div className="bg-[#66BCE4] py-10 px-6 md:px-12">
+      <div className=" py-10 px-6 md:px-12">
         <div className="flex flex-col md:flex-row items-center gap-6 max-w-7xl mx-auto">
           <img
             src="/assets/OnDemandImg.png"
@@ -55,10 +55,10 @@ const OnDemandEconomy = () => {
             className="w-full md:w-1/3 rounded-lg shadow-md"
           />
           <div className="md:w-2/3">
-            <h2 className="text-2xl font-semibold text-white mb-4">
+            <h2 className="text-2xl font-semibold text-[#575757] mb-4">
               How IT Transforms the OnDemand Economy:
             </h2>
-            <p className="text-white text-base leading-relaxed">
+            <p className="text-[#575757] text-base leading-relaxed">
               Empowering the on-demand economy, information technology (IT) plays a crucial role in enabling businesses to offer instant services and products to consumers. IT-driven platforms, such as mobile apps and websites, connect customers with providers in real-time for services like ride-sharing, food delivery, home maintenance, cloud computing, and data analytics-driven operations, enhancing scalability and efficiency. Payment gateways and digital wallets ensure secure transactions, while AI and machine learning personalize user experiences, optimize routes, and predict preferences. IT facilitates seamless back-end processes and scalable business models, fostering growth in the on-demand economy.
             </p>
           </div>

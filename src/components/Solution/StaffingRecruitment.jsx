@@ -1,4 +1,5 @@
 import React from 'react';
+import HeroSection from '../HeroSection/HeroSection';
 
 const StaffingRecruitment = () => {
   const sections = [
@@ -52,18 +53,18 @@ const StaffingRecruitment = () => {
 
   return (
     <section className="w-full font-sans text-gray-800">
+
       {/* Hero Section */}
-      <div className="w-full h-[70vh] bg-fixed bg-no-repeat bg-cover bg-[url('/assets/Staffing.svg')] flex flex-col justify-center items-center text-white text-center px-6">
-        <h1 className="text-4xl font-bold">Staffing And Recruitment Industry</h1>
-      </div>
+
+    <HeroSection heading='Staffing And Recruitment Industry' />
 
       {/* Intro Section */}
-      <div className='bg-[#66BCE4] p-6 mt-12'>
+      <div className=' p-6 mt-12'>
       <div className=" flex flex-col md:flex-row gap-20 items-center max-w-6xl mx-auto text-white">
         <div className="md:w-2/3">
-          <h2 className="text-xl font-semibold text-white mb-2">
+          <h2 className="text-xl font-semibold text-[#575757] mb-2">
           How IT Transforms the Staffing and Recruitment Industry:          </h2>
-          <p className="text-white leading-relaxed">
+          <p className="text-[#575757] leading-relaxed">
           Information technology (IT) is transforming the staffing and recruitment industry by streamlining hiring processes, improving candidate matching, and enhancing operational efficiency. IT tools like Applicant Tracking Systems (ATS) automate candidate sourcing, resume screening, and interview scheduling, significantly reducing administrative workload. AI and machine learning algorithms help match candidates to job roles based on skills, experience, and cultural fit, leading to better recruitment outcomes. Video interview platforms and online assessments enable remote recruitment, expanding the talent pool globally.
           </p>
         </div>

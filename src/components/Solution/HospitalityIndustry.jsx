@@ -1,4 +1,5 @@
 import React from "react";
+import HeroSection from "../HeroSection/HeroSection";
 
 const HospitalityIndustry = () => {
   const features = [
@@ -39,12 +40,8 @@ const HospitalityIndustry = () => {
   return (
     <section className="w-full">
       {/* Header Section */}
-      <div className="w-full h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('/assets/HospitalityBanner.svg')] flex flex-col justify-center items-center text-white text-center px-6">
-        <h1 className="text-4xl font-bold">Hospitality Industry</h1>
-        <p className="text-lg mt-2">
-          Streamline operations and enhance guest experiences with modern IT solutions.
-        </p>
-      </div>
+            
+      <HeroSection heading="Hospitality Industry" subHeading="Streamline operations and enhance guest experiences with modern IT solutions."  />
 
       {/* Overview Section */}
       <div className="max-w-6xl mx-auto px-6 py-12 text-center">
@@ -55,13 +52,13 @@ const HospitalityIndustry = () => {
       </div>
 
       {/* Image & Description Section */}
-      <div className="w-full bg-[#61C2F0]">
+      <div className="w-full py-10">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-6 items-center">
           <div>
             <h3 className="text-2xl font-semibold text-[#575757]">
             How Information Technology Transforms the Hospitality Industry:
             </h3>
-            <p className="text-white mt-4">
+            <p className="text-[#575757] mt-4">
             Information Technology (IT) revolutionizes the hospitality industry by elevating guest experiences, optimizing operations, and fostering innovation. Mobile check-ins, keyless entry, and automation enhance convenience. Property Management Systems, Point of Sale systems, and automated housekeeping streamline processes. Data analytics and Customer Relationship Management systems enable personalized experiences. Emerging technologies like AI, VR, and AR introduce innovative solutions, empowering hotels to deliver exceptional services and remain competitive.
             </p>
           </div>

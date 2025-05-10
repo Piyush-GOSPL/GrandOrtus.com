@@ -1,15 +1,12 @@
 import React from "react";
+import HeroSection from "../HeroSection/HeroSection";
 
 const FMCGIndustry = () => {
   return (
     <section className="w-full">
       {/* Header Section */}
-      <div className="w-full h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('/assets/FMCGIndustry.svg')] flex flex-col justify-center items-center text-white text-center px-6">
-        <h1 className="text-4xl font-bold">FMCG Industry</h1>
-        <p className="text-lg mt-2">
-          Accelerate your business with innovative IT solutions and IT-enabled services.
-        </p>
-      </div>
+     
+      <HeroSection heading="FMCG Industry" subHeading=" Accelerate your business with innovative IT solutions and IT-enabled services." />
 
       {/* Technology Benefits Section */}
       <div className="w-full py-12">

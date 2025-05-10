@@ -1,4 +1,5 @@
 import React from "react";
+import HeroSection from "../HeroSection/HeroSection";
 
 const TelecomIndustry = () => {
   const features = [
@@ -31,12 +32,8 @@ const TelecomIndustry = () => {
   return (
     <section className="w-full">
       {/* Header Section */}
-      <div className="w-full h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('/assets/TelecomBanner.svg')] flex flex-col justify-center items-center text-white text-center px-6">
-        <h1 className="text-4xl font-bold">Telecom Industry</h1>
-        <p className="text-lg mt-2">
-          Connecting the world with cutting-edge technology and seamless communication.
-        </p>
-      </div>
+     
+      <HeroSection heading="Telecom Industry" subHeading="Connecting the world with cutting-edge technology and seamless communication."/>
 
       {/* Overview Section */}
       <div className="max-w-6xl mx-auto px-6 py-12 text-center">

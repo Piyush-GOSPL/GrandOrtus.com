@@ -1,5 +1,5 @@
 import React from "react";
-
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -24,29 +24,63 @@ const Footer = () => {
             Services
           </h3>
           <ul className="space-y-2 text-sm">
-            <li> <a href="/">    Implementation & IT Infrastructure consulting </a> </li>
-            <li> <a href="/">    Networking and Intranet </a> </li>
-            <li> <a href="/">    Mobile app and Web Development. </a> </li>
-            <li> <a href="/">    FMS and AMC Support. </a> </li>
-            <li> <a href="/">    Mobility and Cloud . </a> </li>
-            <li> <a href="/">    Datacenter infra design and Deployment </a> </li>
-            <li> <a href="/">    Cyber security. </a> </li>
-            <li> <a href="/">    Zero Trust network. </a> </li>
+            <li>
+              <NavLink to="/ImplementationServices" className="hover:underline">
+                Implementation & IT Infrastructure consulting
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/NetworkingandIntranet" className="hover:underline">
+                Networking and Intranet
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/MobileWeb" className="hover:underline">
+                Mobile app and Web Development
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/FMSandAMC" className="hover:underline">
+                FMS and AMC Support
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/MobilityandCloud" className="hover:underline">
+                Mobility and Cloud
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/Datacenter" className="hover:underline">
+                Datacenter infra design and Deployment
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/CyberSecurity" className="hover:underline">
+                Cyber security
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/ZeroTrust" className="hover:underline">
+                Zero Trust network
+              </NavLink>
+            </li>
           </ul>
         </div>
+
         <div className="text-white">
-          <h3 className="text-2xl text-[#0092D6] font-semibold mb-4">
-            More Information
-          </h3>
-          <ul className="space-y-2 text-sm">
-            <li>About us</li>
-            <li>Blogs</li>
-            <li>Case studies </li>
-            <li>Industries</li>
-            <li>Life @ GrandOrtus</li>
-            <li>Contact us</li>
-          </ul>
-        </div>
+  <h3 className="text-2xl text-[#0092D6] font-semibold mb-4">
+    More Information
+  </h3>
+  <ul className="space-y-2 text-sm">
+    <li><NavLink to="/about" className="hover:underline">About us</NavLink></li>
+    <li><NavLink to="/blogs" className="hover:underline">Blogs</NavLink></li>
+    <li><NavLink to="/CaseStudy" className="hover:underline">Case studies</NavLink></li>
+    {/* <li><NavLink to="/industries" className="hover:underline">Industries</NavLink></li> */}
+    <li><NavLink to="/LifeGrandOrtus" className="hover:underline">Life @ GrandOrtus</NavLink></li>
+    <li><NavLink to="/contact" className="hover:underline">Contact us</NavLink></li>
+  </ul>
+</div>
+
       </div>
 
       <div className="flex border-t border-white py-6 mt-6 justify-between">
@@ -56,16 +90,27 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex gap-5">
-          <a href="https://www.facebook.com/Grandortus.Official" target="blank" className="text-[#5682e8] ">
-           <img src="/assets/socialmeida.svg" alt="" />
+          <a
+            href="https://www.facebook.com/Grandortus.Official"
+            target="blank"
+            className="text-[#5682e8] "
+          >
+            <img src="/assets/socialmeida.svg" alt="" />
           </a>
-          <a href="https://www.instagram.com/grandortus.official" target="blank" className="text-[#5682e8] ">
-           <img src="/assets/insta.svg" alt="" />
+          <a
+            href="https://www.instagram.com/grandortus.official"
+            target="blank"
+            className="text-[#5682e8] "
+          >
+            <img src="/assets/insta.svg" alt="" />
           </a>
-          <a href="https://www.linkedin.com/company/grand-ortus-solutions-pty-ltd/" target="blank" className="text-[#5682e8] ">
-           <img src="/assets/linkden.svg" alt="" />
+          <a
+            href="https://www.linkedin.com/company/grand-ortus-solutions-pty-ltd/"
+            target="blank"
+            className="text-[#5682e8] "
+          >
+            <img src="/assets/linkden.svg" alt="" />
           </a>
-
         </div>
       </div>
     </footer>

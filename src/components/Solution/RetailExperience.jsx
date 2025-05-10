@@ -1,4 +1,5 @@
 import React from 'react';
+import HeroSection from '../HeroSection/HeroSection';
 
 const RetailIndustry = () => {
   const benefits = [
@@ -44,15 +45,10 @@ const RetailIndustry = () => {
   return (
     <section className="w-full font-sans text-gray-800">
       {/* Hero Section */}
-      <div className="w-full h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('/assets/RealGaming.svg')] flex flex-col justify-center items-center text-white text-center px-6">
-        <h1 className="text-4xl font-bold">Revolutionizing Retail Experiences</h1>
-        <p className="text-lg mt-3 max-w-2xl">
-          Empowering businesses with cutting-edge technology to deliver unparalleled customer satisfaction
-        </p>
-      </div>
-
+      <HeroSection heading='Revolutionizing Retail Experiences'  subHeading='  Empowering businesses with cutting-edge technology to deliver unparalleled customer satisfaction'/>
+      
       {/* Info Box */}
-      <div className='w-full md:py-5 bg-[#66BCE4]'>
+      <div className='w-full md:py-5 '>
       <div className="flex flex-col md:flex-row gap-6 items-center  max-w-6xl mx-auto">
         <img
           src="/assets/RetailIpng.png"
@@ -60,7 +56,7 @@ const RetailIndustry = () => {
           className="w-full md:w-1/3  object-cover"
         />
         <div className="md:w-2/3">
-          <h2 className="text-xl font-semibold text-white mb-3">
+          <h2 className="text-xl font-semibold text-[#575757] mb-3">
             Information Technology, The Retail Industry's Game-Changer:
           </h2>
           <p className="text-gray-700 leading-relaxed">

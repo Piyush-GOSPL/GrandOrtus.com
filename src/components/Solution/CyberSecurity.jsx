@@ -55,13 +55,13 @@ const CyberSecurity = () => {
         }}
       >
         <h1 className="md:text-5xl text-2xl text-white">
-          Mobile app & web development
+        Cyber Security
         </h1>
         <p className="md:text-2xl text-xl text-white my-6 pl-5 ">
-          "Seamless deployment of tailored solutions to optimize business
-          operations efficiently."
+        "Seamless deployment of tailored solutions to optimize business operations efficiently."
         </p>
       </div>
+      
 
       {/* Additional Image */}
       <div className="w-full flex justify-center mt-8 md:p-20 p-5">

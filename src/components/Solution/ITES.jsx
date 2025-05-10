@@ -1,16 +1,10 @@
 import React from "react";
-
+import HeroSection from "../HeroSection/HeroSection";
 const ITES = () => {
   return (
     <section className="w-full">
-      {/* Header Section */}
-      <div className="w-full h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('/assets/ITESBanner.svg')] flex flex-col justify-center items-center text-white text-center px-6">
-        <h1 className="text-4xl font-bold">IT & ITES Industry</h1>
-        <p className="text-lg mt-2">
-          Accelerate your business with innovative IT solutions and IT-enabled
-          services
-        </p>
-      </div>
+     <HeroSection heading="IT & ITES Industry" imgurl="/assets/ITESBanner.svg" subHeading="Accelerate your business with innovative IT solutions and IT-enabled services" />
+    
 
       {/* Overview Section */}
       <div className="max-w-6xl mx-auto px-6 py-12 text-center">
@@ -26,13 +20,13 @@ const ITES = () => {
       </div>
 
       {/* Information Technology Section */}
-      <div className="w-full bg-[#61C2F0] ">
+      <div className="w-full  ">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-6 items-center">
           <div>
             <h3 className="text-2xl font-semibold text-[#575757]">
               Information Technology: The Engine Driving the IT Industry:
             </h3>
-            <p className="text-white mt-4">
+            <p className="text-[#575757] mt-4">
               IT enables the creation of innovative software solutions that
               enhance business processes and user experiences. It also provides
               essential tools for managing big data and extracting valuable

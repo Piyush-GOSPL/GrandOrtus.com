@@ -1,16 +1,12 @@
 import React from "react";
+import HeroSection from "../HeroSection/HeroSection";
 
 const ManufacturingIndustry = () => {
   return (
     <section className="w-full">
       {/* Header Section */}
-      <div className="w-full h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('/assets/ManufacturingIndustry.svg')] flex flex-col justify-center items-center text-white text-center px-6">
-        <h1 className="text-4xl font-bold">Manufacturing Industry</h1>
-        <p className="text-lg mt-2">
-          Streamline operations and enhance efficiency with modern IT solutions.
-        </p>
-      </div>
-
+     
+      <HeroSection heading="Manufacturing Industry" subHeading="Streamline operations and enhance efficiency with modern IT solutions." />
       {/* Overview Section */}
       <div className="max-w-6xl mx-auto px-6 py-12 text-center">
         <h2 className="text-3xl font-bold">Overview of IT & Manufacturing Industry</h2>
@@ -19,12 +15,12 @@ const ManufacturingIndustry = () => {
         </p>
       </div>
       
-      <div className="w-full py-12 bg-[#0A76A8]">
+      <div className="w-full py-12 ">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mt-6 grid md:grid-cols-2 gap-6 items-center">
             <div className=" text-white p-6">
-              <h3 className="text-2xl font-semibold">Thriving Manufacturing Industry</h3>
-              <p className="mt-4">
+              <h3 className="text-2xl font-semibold text-[#575757]">Thriving Manufacturing Industry</h3>
+              <p className="mt-4 text-[#575757]">
                 Advancements in IT are shaping the manufacturing industry by enhancing automation, efficiency, and productivity. 
                 Technologies like IoT, AI, and robotics improve supply chain management, reduce downtime, and optimize processes. 
                 Data analytics enable real-time decision-making, while cloud-based solutions streamline operations.

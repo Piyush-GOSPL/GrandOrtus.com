@@ -1,4 +1,5 @@
 import React from 'react';
+import HeroSection from '../HeroSection/HeroSection';
 
 const RealMoneyGaming = () => {
   const industryContent = [
@@ -82,18 +83,13 @@ const RealMoneyGaming = () => {
   return (
     <section className="w-full">
       {/* Hero Section */}
-      <div className="w-full h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('/assets/RealGaming.svg')] flex flex-col justify-center items-center text-white text-center px-6">
-        <h1 className="text-4xl font-bold">Real Money Gaming Industry</h1>
-        <p className="text-lg mt-2">
-          Streamline operations and enhance efficiency with modern IT solutions.
-        </p>
-      </div>
+      <HeroSection heading='Real Money Gaming Industry' subHeading=' Streamline operations and enhance efficiency with modern IT solutions.' />
 
       {/* Info Section */}
-      <div className="w-full py-12 bg-[#0A76A8]">
+      <div className="w-full py-12 ">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mt-6 grid md:grid-cols-2 gap-6 items-center">
-            <div className="text-white p-6">
+            <div className="text-[#575757] p-6">
               <h3 className="text-2xl font-semibold">
                 Information Technology as the Backbone of Real Money Gaming:
               </h3>
