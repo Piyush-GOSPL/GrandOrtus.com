@@ -1,49 +1,51 @@
 import React from 'react';
+import ServicesList from './ServicesList';
+import ServiceCard from './ServiceCard';
 
 const ImplementationServices = () => {
 
-  const services = [
-    {
-      name: "Implementation Service",
-      icon: "/assets/implementation.png",
-      bg: "bg-[#0090d2]",
-    },
-    {
-      name: "Datacenter Infra Design & Deployment",
-      icon: "/assets/datacenter.png",
-      bg: "bg-[#575757]",
-    },
-    {
-      name: "Networking and Intranet",
-      icon: "/assets/networking.png",
-      bg: "bg-[#0090d2]",
-    },
-    {
-      name: "IT Infrastructure Consulting",
-      icon: "/assets/it-consulting.png",
-      bg: "bg-[#575757]",
-    },
-    {
-      name: "Mobility and Cloud",
-      icon: "/assets/cloud.png",
-      bg: "bg-[#0090d2]",
-    },
-    {
-      name: "Mobile App & Web Development",
-      icon: "/assets/mobile-app.png",
-      bg: "bg-[#575757]",
-    },
-    {
-      name: "Zero Trust Network Framework",
-      icon: "/assets/zero-trust.png",
-      bg: "bg-[#0090d2]",
-    },
-    {
-      name: "FMS & AMC Support",
-      icon: "/assets/fms-amc.png",
-      bg: "bg-[#575757]",
-    },
-  ];
+  // const services = [
+  //   {
+  //     name: "Implementation Service",
+  //     icon: "/assets/implementation.png",
+  //     bg: "bg-[#0090d2]",
+  //   },
+  //   {
+  //     name: "Datacenter Infra Design & Deployment",
+  //     icon: "/assets/datacenter.png",
+  //     bg: "bg-[#575757]",
+  //   },
+  //   {
+  //     name: "Networking and Intranet",
+  //     icon: "/assets/networking.png",
+  //     bg: "bg-[#0090d2]",
+  //   },
+  //   {
+  //     name: "IT Infrastructure Consulting",
+  //     icon: "/assets/it-consulting.png",
+  //     bg: "bg-[#575757]",
+  //   },
+  //   {
+  //     name: "Mobility and Cloud",
+  //     icon: "/assets/cloud.png",
+  //     bg: "bg-[#0090d2]",
+  //   },
+  //   {
+  //     name: "Mobile App & Web Development",
+  //     icon: "/assets/mobile-app.png",
+  //     bg: "bg-[#575757]",
+  //   },
+  //   {
+  //     name: "Zero Trust Network Framework",
+  //     icon: "/assets/zero-trust.png",
+  //     bg: "bg-[#0090d2]",
+  //   },
+  //   {
+  //     name: "FMS & AMC Support",
+  //     icon: "/assets/fms-amc.png",
+  //     bg: "bg-[#575757]",
+  //   },
+  // ];
 
   return (
     <section className="w-full md:my-16">
@@ -63,7 +65,7 @@ const ImplementationServices = () => {
           className="max-w-full h-auto"/>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:p-20 p-10 ">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:p-20 p-10 ">
           {services.map((service, index) => (
             <div
               key={index}
@@ -77,7 +79,9 @@ const ImplementationServices = () => {
               <h3 className="text-lg font-semibold">{service.name}</h3>
             </div>
           ))}
-        </div>
+        </div> */}
+      
+      <ServiceCard />
 
     </section>
 

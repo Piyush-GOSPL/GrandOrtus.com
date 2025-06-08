@@ -48,7 +48,7 @@ const SatisfiedCustomers = () => {
   ];
 
   return (
-    <section className="w-full p-20 mx-auto bg-[#0090d2]">
+    <section className="w-full md:p-20 p-5 mx-auto bg-[#0090d2]">
       <h1 className="text-center text-4xl bg-[url('/assets/satisfied-bg.svg')] bg-center bg-no-repeat">
         Satisfied Customers
       </h1>

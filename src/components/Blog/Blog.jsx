@@ -33,9 +33,9 @@ const Blogs = () => {
   ];
 
   return (
-    <section className="mx-auto flex flex-col items-center justify-center container p-14 md:px-20 lg:px-32 w-full overflow-hidden relative">
-      <h3 className="text-2xl ">Blogs and News</h3>
-      <h1 className="text-4xl text-[#0090d2]">Our Latest Blog and News</h1>
+    <section className="mx-auto flex flex-col items-center justify-center container p-14 md:px-20 lg:px-32 px-5 w-full overflow-hidden relative">
+     <h3 className="text-xl sm:text-2xl lg:text-3xl">Blogs and News</h3>
+<h1 className="text-2xl sm:text-4xl lg:text-5xl text-[#0090d2]">Our Latest Blog and News</h1>
 
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-6 my-5  after:bg-[#575757] after:w-full after:h-[100px]  after:bottom-[25%] after:absolute  after:left-[-3px] after:-z-10  ">
         {card.map((cards, index) => (

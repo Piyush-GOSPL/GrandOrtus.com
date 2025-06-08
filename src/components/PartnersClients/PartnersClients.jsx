@@ -29,7 +29,7 @@ const PartnersClients = () => {
   );
 
   return (
-    <section className="text-center py-12 ">
+    <section className="text-center py-12 px-5">
       <h1 className="text-4xl font-semibold text-gray-800 mb-2 ">
         Our Trusted Partners
       </h1>

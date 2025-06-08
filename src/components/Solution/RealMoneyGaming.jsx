@@ -83,7 +83,7 @@ const RealMoneyGaming = () => {
   return (
     <section className="w-full">
       {/* Hero Section */}
-      <HeroSection heading='Real Money Gaming Industry' subHeading=' Streamline operations and enhance efficiency with modern IT solutions.' />
+      <HeroSection heading='Real Money Gaming Industry' subHeading=' Streamline operations and enhance efficiency with modern IT solutions.'/>
 
       {/* Info Section */}
       <div className="w-full py-12 ">

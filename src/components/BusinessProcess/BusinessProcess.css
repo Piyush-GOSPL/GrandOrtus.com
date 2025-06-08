@@ -38,3 +38,22 @@
     color: white;
   }
   
+
+  @media (max-width: 768px) {
+    .like-sec {
+        width: 160px;
+        font-size: 14px;
+        padding: 6px 10px;
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .like-sec {
+         width: 192px;
+        font-size: 13px;
+        padding: 0px 8px;
+        bottom: 8px;
+        left: 0;
+    }
+}

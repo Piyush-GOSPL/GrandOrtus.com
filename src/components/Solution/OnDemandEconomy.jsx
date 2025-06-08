@@ -40,8 +40,8 @@ const OnDemandEconomy = () => {
     <section className="w-full">
       {/* Hero Section */}
       <div className="w-full h-[50vh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('/assets/OnDemand.svg')] flex flex-col justify-center items-center text-white text-center px-6">
-        <h1 className="text-4xl font-bold leading-tight">Empowering the On-Demand Economy</h1>
-        <p className="text-lg mt-3 max-w-2xl">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-12 sm:mt-14">Empowering the On-Demand Economy</h1>
+        <p className="text-base sm:text-lg md:text-xl mt-3 sm:mt-4 max-w-3xl">
           The on-demand economy thrives on speed, convenience, and instant access, with technology serving as its backbone.
         </p>
       </div>

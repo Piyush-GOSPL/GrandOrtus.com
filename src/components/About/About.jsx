@@ -1,16 +1,17 @@
 import React from "react";
 import { FaUsers, FaHandshake, FaPhone } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import BannerSection from "../Resource/BannerSection";
 // import Banner from '../Banner/Banner'
 
 const About = () => {
   return (
     <>
-      <section
+      {/* <section
         className="relative w-full h-[70vh] flex items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('/assets/aboutBanner.svg')] "
         id="about"
       >
-        {/* <div className="absolute inset-0 bg-black/50"></div> */}
+      \<div className="absolute inset-0 bg-black/50"></div> 
 
         <div className="relative z-10 text-center text-white px-6">
           <h1 className="text-2xl md:text-2xl lg:text-2xl font-bold tracking-wide mb-4">
@@ -20,7 +21,11 @@ const About = () => {
             Innovate, Transform, and Succeed with Cutting-Edge Technology.
           </p>
         </div>
-      </section>
+      </section> */}
+
+      <BannerSection heading="Unlocking the Power of Technology for Your Success" subheading=" Innovate, Transform, and Succeed with Cutting-Edge Technology."  bgImage="/assets/aboutBanner.svg"/>
+
+    
 
       <div
         className="flex flex-col lg:flex-row items-center justify-around gap-10 mx-auto lg:p-20 md:p-10 my-10 bg-no-repeat bg-[length:150px] bg-right-top"
@@ -67,7 +72,7 @@ const About = () => {
         </div>
 
         {/* Text Content Section */}
-        <div className="w-full   bg-gray-100 shadow-lg p-6 rounded-lg -translate-x-[110px]">
+        <div className="w-full max-w-4xl mx-auto bg-gray-100 shadow-lg p-6 md:p-10 rounded-lg">
           <h3 className="text-2xl lg:text-3xl font-bold text-[#0090d2] mb-4">
             About Us
           </h3>
@@ -106,7 +111,7 @@ const About = () => {
           <ul className="mt-4 space-y-3">
             <li className="flex items-center">
               <span
-                className="w-4 h-4 rounded-full mr-3 "
+                className="w-4 h-4 rounded-full mr-3 shrink-0"
                 style={{
                   background:
                     "linear-gradient(180deg, #0092D6 52.6%, #575757 63.6%)",
@@ -116,7 +121,7 @@ const About = () => {
             </li>
             <li className="flex items-center">
               <span
-                className="w-4 h-4 rounded-full mr-3 "
+                className="w-4 h-4 rounded-full mr-3 shrink-0"
                 style={{
                   background:
                     "linear-gradient(180deg, #0092D6 52.6%, #575757 63.6%)",
@@ -127,7 +132,7 @@ const About = () => {
             </li>
             <li className="flex items-center">
               <span
-                className="w-4 h-4 rounded-full mr-3 "
+                className="w-4 h-4 rounded-full mr-3 shrink-0"
                 style={{
                   background:
                     "linear-gradient(180deg, #0092D6 52.6%, #575757 63.6%)",
@@ -137,7 +142,7 @@ const About = () => {
             </li>
             <li className="flex items-center">
               <span
-                className="w-4 h-4 rounded-full mr-3 "
+                className="w-4 h-4 rounded-full mr-3 shrink-0"
                 style={{
                   background:
                     "linear-gradient(180deg, #0092D6 52.6%, #575757 63.6%)",

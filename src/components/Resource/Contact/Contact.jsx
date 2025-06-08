@@ -4,7 +4,8 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <section className="w-full my-16">
+    <section className="w-full">
+      
       <div
         className="w-full flex justify-start items-center h-[60vh] bg-cover bg-center pl-20"
         style={{ backgroundImage: "url('/assets/Contact.svg')" }}
@@ -12,7 +13,7 @@ const Contact = () => {
         <h1 className="text-4xl font-bold text-white">Contact Us</h1>
       </div>
 
-      <div className="flex justify-center items-center py-10">
+      <div className="lg:flex justify-center items-center py-10">
         <img src="/assets/colan.svg" alt="" />
         <p className="md:w-1/2 text-base mt-15 ml-10">
           "Get in touch with us today! Whether you have questions or need
@@ -22,15 +23,14 @@ const Contact = () => {
         </p>
       </div>
 
-      <div className="flex justify-center bg-gray-100 bg-gray-100">
+      <div className="flex md:flex-row flex-col justify-center bg-gray-100 bg-gray-100">
         <div className=" px-10 py-16 flex flex-col ">
-          <h2 className="text-3xl font-semibold mb-8">Head Office</h2>
+          <h2 className="text-3xl font-semibold mb-8">India Office</h2>
           <div className="flex flex-col space-y-6 ">
             <div className="flex items-center space-x-4">
               <FaMapMarkerAlt className="text-2xl text-[#0090d2]" />
               <p className="text-lg">
-                D 14/30, 2nd Floor, Sector 52, Ardeecity Gurugram, Haryana -
-                122003, India
+              Unit No. 508 & 509, TOWER-B, Unitech Business Zone, Nirvana Rd, The Close South, Sector 50, Gurugram, Haryana 122018
               </p>
             </div>
             <div className="flex items-center space-x-4">
@@ -55,7 +55,7 @@ const Contact = () => {
         </div>
 
         <div className=" px-10 py-16 flex flex-col ">
-          <h2 className="text-3xl font-semibold mb-8">Head Office</h2>
+          <h2 className="text-3xl font-semibold mb-8">Australia  Office</h2>
           <div className="flex flex-col space-y-6 ">
             <div className="flex items-center space-x-4">
               <FaMapMarkerAlt className="text-2xl text-[#0090d2]" />
@@ -94,7 +94,7 @@ const Contact = () => {
           className="max-w-full h-auto"
         />
       </div>
-      <img src="/assets/ContactLine.png" alt=""  className="line w-[40px]"/>
+      <img src="/assets/ContactLine.png" alt=""  className="md:block hidden line w-[40px]"/>
       <div className="md:w-1/2 w-full  ">
         <h4 className="text-2xl font-semibold text-gray-700">Contact us</h4>
         <p className="text-xl font-semibold text-gray-700 mb-5">

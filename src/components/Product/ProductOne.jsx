@@ -41,10 +41,10 @@ const ProductOne = () => {
   ];
 
   return (
-    <section className="w-full my-16">
+    <section className="w-full">
       {/* Header Section */}
-      <div className="text-white py-10 px-6 text-center w-full h-[70dvh] bg-fixed bg-center bg-no-repeat bg-cover bg-[url('/assets/ProductOne.svg')] flex flex-col justify-center md:items-end ">
-        <h1 className="text-3xl md:text-4xl max-w-1/2 font-bold">
+      <div className="text-white py-10 px-6 text-center w-full min-h-[70vh] bg-fixed bg-center bg-no-repeat bg-cover bg-[url('/assets/ProductOne.svg')] flex flex-col justify-center items-center md:items-end">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold max-w-full sm:max-w-[70%] md:max-w-[50%] mx-auto md:mx-0">
           G-Ortus NetGuardian ProX Network Policy Manager Tailored Solutions
         </h1>
       </div>
@@ -52,14 +52,26 @@ const ProductOne = () => {
       {/* Description Section */}
       <div className="max-w-6xl mx-auto py-12 px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
-          <h2 className="text-2xl font-semibold mb-4">Network Policy Manager</h2>
+          <h2 className="text-2xl font-semibold mb-4">
+            Network Policy Manager
+          </h2>
           <p className="text-gray-700">
-            G-Ortus NetGuardian ProX Network Policy Manager stands at the forefront of innovative network access and security solutions, specifically designed to meet the dynamic needs of modern enterprises. It delivers next-gen features like
-            real-time tracking, security, and operational efficiency, making this ideal for secure multi-segment corporate LAN/WiFi environments. G-Ortus NetPM software is meticulously designed to cater to specific needs and demands, ensuring high IT
-            system efficiency while being lightweight and highly scalable.
+            G-Ortus NetGuardian ProX Network Policy Manager stands at the
+            forefront of innovative network access and security solutions,
+            specifically designed to meet the dynamic needs of modern
+            enterprises. It delivers next-gen features like real-time tracking,
+            security, and operational efficiency, making this ideal for secure
+            multi-segment corporate LAN/WiFi environments. G-Ortus NetPM
+            software is meticulously designed to cater to specific needs and
+            demands, ensuring high IT system efficiency while being lightweight
+            and highly scalable.
           </p>
         </div>
-        <img src="/assets/ProductOneBody.png" alt="Network Policy" className="w-full rounded-lg" />
+        <img
+          src="/assets/ProductOneBody.png"
+          alt="Network Policy"
+          className="w-full rounded-lg"
+        />
       </div>
 
       {/* Key Features Section */}
@@ -69,8 +81,13 @@ const ProductOne = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-lg p-6 text-center border border-gray-200 hover:shadow-lg transition">
-              <img src={feature.icon} alt={feature.title} className="w-12 h-12 mx-auto mb-4" />
+              className="bg-white shadow-md rounded-lg p-6 text-center border border-gray-200 hover:shadow-lg transition"
+            >
+              <img
+                src={feature.icon}
+                alt={feature.title}
+                className="w-12 h-12 mx-auto mb-4"
+              />
               <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
               <p className="text-sm text-gray-600">{feature.description}</p>
             </div>

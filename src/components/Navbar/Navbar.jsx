@@ -1,107 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import MobileNavbar from "./MobileNavbar";
+import {navMenuData} from './Navbar.constants';
+import { useNavbarHook } from "./useNavbarHook";
 
-const Navbar = ({onGetQuoteClick}) => {
-  const [menuBar, setMenuBar] = useState(false);
-
-  const handleMenubar = () => {
-    setMenuBar(!menuBar);
-  };
-
-  const navMenuData = [
-    { label: "Home", url: "Home" },
-    {
-      label: "Resource",
-      // url: "/",
-      subNavBar: [
-        { label: "About Us", url: "About" },
-        // { label: "Team", url: "/" },
-        { label: "Blogs", url: "Blogs" },
-        { label: "Case Studies", url: "CaseStudy" },
-        { label: "Awards & Certifications", url: "AwardsandCertification" },
-        {
-          label: "Career",
-          // url: "/",
-          dropdown: [
-            { label: "Life Grand Ortus", url: "LifeGrandOrtus" },
-            { label: "Current Openings", url: "CurrentOpenings" },
-            { label: "Corporate Social Responsibility", url: "CSR" },
-          ],
-        },
-
-        { label: "Contact Us", url: "Contact" },
-      ],
-    },
-    {
-      label: "Association",
-      // url: "/",
-      subNavBar: [
-        { label: "Clients", url: "Clients" },
-        { label: "Partners", url: "Partners" },
-      ],
-    },
-    { label: "Product",
-      subNavBar: [
-        { label: "Product I Description", url: "ProductOne" },
-        { label: "Product II Description", url: "ProductTwo" }, 
-        
-      ],
-     },
-    {
-      label: "Solution",
-      // url: "/",
-      subNavBar: [
-        {
-          title: "Company Size",
-          submenu: [
-            { label: "Startups", url: "Startups" },
-            { label: "MSMEs", url: "MSMEs" },
-            { label: "Enterprises", url: "Enterprises" },
-          ],
-        },
-
-        {
-          title: "Services",
-          submenu: [
-            { label: "Services List", url: "ServicesList" },
-            { label: "Implementation Services", url: "ImplementationServices" },
-            // { label: "IT Infrastructure Consulting", url: "#" },
-            {
-              label: "Datacenter Infra Design & Deployment",
-              url: "Datacenter",
-            },
-            { label: "Networking and Intranet", url: "NetworkingandIntranet" },
-            { label: "Mobile App & Web Development", url: "MobileWeb" },
-            { label: "Mobility and Cloud", url: "MobilityandCloud" },
-            { label: "Cyber Security", url: "CyberSecurity" },
-            { label: "FMS and AMC Support", url: "FMSandAMC" },
-            { label: "Zero Trust Network Framework", url: "ZeroTrust" },
-          ],
-        },
-
-        {
-          title: "By Industries",
-          submenu: [        
-            { label: "IT & ITES", url: "IT&ITES" },
-            { label: "Hospitality Industry", url: "HospitalityIndustry" },
-            { label: "Telecom Industry", url: "TelecomIndustry" },
-            { label: "FMCG Industry", url: "FMCGIndustry" },
-            { label: "Healthcare Industry", url: "HealthcareIndustry" },
-            { label: "Manufacturing Industry", url: "ManufacturingIndustry" },
-            { label: "Real Money Gaming Industry", url: "RealMoneyGaming" },
-            { label: "Retail Industry", url: "RetailIndustry" },
-            { label: "Staffing and Recruitment", url: "StaffingRecruitment" },
-            { label: "On Demand Economy", url: "OnDemandEconomy" },
-          ],
-        },
-      ],
-      isCustomNavbar: true,
-    },
-  ];
-
+const Navbar = ({ onGetQuoteClick }) => {
+  const {closeMenuBar,handleMenubar,menuBar,openSubMenuIndex,toggleSubMenu} = useNavbarHook()
   return (
-    <nav className="w-full md:fixed sm:top-0 bg-white py-3 md:flex items-center justify-between px-5 z-9999 shadow-md">
+    <nav className="w-full fixed sm:top-0 bg-white py-3 md:flex items-center justify-between px-5 z-9999 shadow-md absolute">
       {/* Logo */}
       <span className="max-w-[200px] inline-block">
         <NavLink to="Home" title="Grand Ortus - Home">
@@ -112,7 +19,8 @@ const Navbar = ({onGetQuoteClick}) => {
       {/* Mobile Menu Icon */}
       <span
         className="md:hidden absolute right-8 top-6 cursor-pointer"
-        onClick={handleMenubar}>
+        onClick={handleMenubar}
+      >
         <i
           className={`fa-solid ${
             menuBar ? "fa-xmark" : "fa-bars"
@@ -122,34 +30,38 @@ const Navbar = ({onGetQuoteClick}) => {
 
       {/* Navigation Menu */}
       <ul
-        className={`absolute bg-white left-0 w-full md:flex md:static transition-all duration-500 ease-in justify-center ${
-          menuBar ? "top-[80px]" : "top-[-500px]"
+        className={`absolute  ${menuBar ? 'h-dvh overflow-y-auto' : ''}   bg-white left-0 w-full md:flex md:static transition-all duration-500 ease-in justify-center ${
+          menuBar ? "block" : "hidden"
         }`}
       >
+        <div className="md:flex hidden">
         {navMenuData.map((menu, index) => (
           <li
+            onClick={() => toggleSubMenu(index)}
             key={index}
             className="relative group text-lg text-[18px] px-4 py-2"
           >
-            <NavLink
-              to={menu.url}
-              className="hover:bg-sky-700 duration-150 ease-in-out hover:text-white text-[#575757] p-[8px] rounded-[10px]"
-            >
-              {menu.label}
-            </NavLink>
+            <span className="flex items-center gap-2 hover:bg-sky-700 duration-150 ease-in-out hover:text-white text-[#575757] p-[8px] rounded-[10px]">
+              <NavLink to={menu.url || "#"}>{menu.label}</NavLink>
+              {menu.subNavBar && (
+                <i className="fa-solid fa-chevron-down text-xs mt-[2px]"></i>
+              )}
+            </span>
 
             {/* Submenu */}
 
             {menu.subNavBar && (
               <ul
-                className={`absolute left-0 reletive top-full hidden group-hover:block bg-white rounded-md py-2 ${
+                className={`${
+                  openSubMenuIndex === index ? "" : ""
+                }  hidden absolute left-0 top-full group-hover:block bg-white rounded-md py-2 ${
                   menu.isCustomNavbar ? "w-full flex" : "w-60"
                 }`}
               >
                 {menu.isCustomNavbar ? (
-                  <div className="flex w-[754px] left-[-200px] top-0 absolute p-4 bg-white shadow-md rounded-md">
+                  <div className="flex md:w-[754px] left-[-200px] top-0 absolute p-4 bg-white shadow-md rounded-md">
                     {menu.subNavBar.map((submenuCategory, subIndex) => (
-                      <div key={subIndex} className=" px-2">
+                      <div key={subIndex} className="px-2">
                         <h3 className="font-bold text-gray-700">
                           {submenuCategory.title}
                         </h3>
@@ -174,11 +86,18 @@ const Navbar = ({onGetQuoteClick}) => {
                       key={subIndex}
                       className="relative dropitem px-4 py-1 hover:bg-[#0090d2] hover:text-white text-[#575757] group"
                     >
-                      <NavLink to={subMenu.url}>{subMenu.label}</NavLink>
+                      <span className="flex items-center justify-between">
+                        <NavLink to={subMenu.url}>{subMenu.label}</NavLink>
+                        {subMenu.dropdown && (
+                          <i className="fa-solid fa-chevron-right text-xs ml-2"></i>
+                        )}
+                      </span>
 
                       {/* Nested Dropdown */}
                       {subMenu.dropdown && (
-                        <ul className="absolute left-full top-[-8px] hidden showme bg-white shadow-md rounded-md w-70 py-2">
+                        <ul
+                          className={`absolute left-full top-[-8px] hidden showme bg-white shadow-md rounded-md w-70 py-2`}
+                        >
                           {subMenu.dropdown.map((dropItem, i) => (
                             <li
                               key={i}
@@ -198,17 +117,18 @@ const Navbar = ({onGetQuoteClick}) => {
             )}
           </li>
         ))}
+        </div>
+        <MobileNavbar closeMenuBar={closeMenuBar} />
       </ul>
 
       {/* Call to Action Button */}
-      <button className="lg:block hidden bg-[#0090d2] text-white font-[Poppins] py-2 px-6 text-nowrap rounded hover:bg-[#87d9ff] cursor-pointer duration-500"
-       onClick={onGetQuoteClick}
+      <button
+        className="lg:block hidden bg-[#0090d2] text-white font-[Poppins] py-2 px-6 text-nowrap rounded hover:bg-[#87d9ff] cursor-pointer duration-500"
+        onClick={onGetQuoteClick}
       >
         Get a quote
       </button>
     </nav>
-
-
   );
 };
 

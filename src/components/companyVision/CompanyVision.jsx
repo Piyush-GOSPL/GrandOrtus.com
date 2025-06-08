@@ -6,7 +6,7 @@ const CompanyVision = () => {
   return (
     <section className="w-full p-5 md:pt-20 md:pr-20 md:pl-20 pb-0 flex md:flex-row flex-col justify-center md:gap-20 gap-5 bg-[#C5DEE9]">
       {/* Left Image Section */}
-      <div className="md:w-[50%] w-full flex flex-col items-center">
+      <div className="md:w-[50%] w-full flex flex-col items-center gap-8">
         <img
           src="./assets/Rectangle-2.svg"
           alt=""

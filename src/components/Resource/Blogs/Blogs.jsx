@@ -1,5 +1,7 @@
 import React from "react";
 import './Blogs.css';
+// import HeroSection from "../../HeroSection/HeroSection";
+import BannerSection from "../BannerSection";
 
 const Blogs = () => {
   const BlogsCard = [
@@ -36,13 +38,8 @@ const Blogs = () => {
   ];
   return (
     <>
-      <section className="relative w-full h-[70vh] flex items-center justify-center flex-col bg-cover bg-center bg-no-repeat bg-[url('/assets/BlogBanner.svg')] ">
-        <h1 className="text-white text-3xl">Blogs & Updates</h1>
-        <p className="text-white text-xl mt-4">
-          "Secure, scalable, and efficient—where networking meets software
-          innovation."
-        </p>
-      </section>
+
+     <BannerSection/>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8 my-6 bg-cover bg-center bg-no-repeat bg-[url('/assets/cardbgimg.svg')] px-20 py-10">
         {BlogsCard.map((blog, i) => (

@@ -1,4 +1,5 @@
 import React from 'react'
+import SolutionSection from './SolutionSection';
 
 const MSMEs = () => {
 
@@ -30,15 +31,8 @@ const MSMEs = () => {
       ];
     
   return (
-    <section className="w-full my-16">
-    <div className="w-full h-[70dvh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('/assets/MSME.svg')] flex flex-col justify-center items-start px-6">
-      <h1 className="text-5xl text-white font-bold max-w-3xl">
-      Importance of MSMEs in the economy
-      </h1>
-      <p className="text-2xl text-white mt-4 max-w-2xl">
-      Role of systems integrators in modernizing and optimizing MSMEs.
-      </p>
-    </div>
+    <section className="w-full">
+      <SolutionSection heading="Importance of MSMEs in the economy" subheading="Role of systems integrators in modernizing and optimizing MSMEs." backgroundImage="/assets/MSME.svg"/>
 
     <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-6 lg:gap-12 p-4 md:py-20">
       <div className="w-full md:w-1/2 flex justify-center">

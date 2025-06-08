@@ -6,29 +6,29 @@ const Enterprises = () => {
           title: "IT Infrastructure & Cloud Solutions",
           description:
             "This includes network design, service deployment, storage solutions, virtualization, and IT support services to ensure seamless operations. The goal is to build a reliable and high-performing IT backbone that supports business growth.",
-          icon: "\ud83d\udee0\ufe0f", // Replace with actual icon
+          icon: "\ud83d\udee0\ufe0f", 
         },
         {
           title: "Business Application & Software Integration",
           description:
             "Upgrading and integrating outdated software with modern cloud-based or AI-driven applications to enhance efficiency without disrupting existing business operations.",
-          icon: "\ud83d\udcbb", // Replace with actual icon
+          icon: "\ud83d\udcbb", 
         },
         {
           title: "Cybersecurity & Compliance Solutions",
           description:
             "Implementation of firewalls, intrusion detection/prevention systems. Providing end-to-end encryption, identity access management.",
-          icon: "\ud83d\udd12", // Replace with actual icon
+          icon: "\ud83d\udd12", 
         },
         {
           title: "Managed IT Services & Support",
           description:
             "IT management to ensure seamless operations, enhanced security, and optimal system performance. It includes network monitoring, IT infrastructure maintenance, cloud management, and helpdesk support.",
-          icon: "\ud83c\udf10", // Replace with actual icon
+          icon: "\ud83c\udf10", 
         },
       ];
   return (
-    <section className='w-full my-16'>
+    <section className='w-full'>
     {/* Hero Section */}
     <div className="w-full h-[70dvh] bg-fixed bg-no-repeat bg-cover bg-center bg-[url('/assets/Enterprises.svg')] flex flex-col justify-center items-end px-6 ">
       <div className="text-center px-6 text-white">

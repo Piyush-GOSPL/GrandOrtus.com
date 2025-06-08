@@ -95,12 +95,12 @@ const Contactus = () => {
   };
 
   return (
-    <section className="px-20">
+    <section className="md:px-20 px-2">
       <div className="flex flex-col md:flex-row gap-10 items-center md:items-start p-5 my-10">
         <div className="md:w-1/2 flex justify-center">
           <img src="/assets/getintouch.svg" alt="Get in touch" className="max-w-full h-auto" />
         </div>
-        <img src="/assets/ContactLine.png" alt="" className="line w-[40px]" />
+        <img src="/assets/ContactLine.png" alt="" className="md:block hidden line w-[40px]" />
         <div className="md:w-1/2 w-full">
           <h4 className="text-2xl font-semibold text-gray-700">Contact us</h4>
           <p className="text-xl font-semibold text-gray-700 mb-5">Let’s Start a Conversation</p>

@@ -189,10 +189,10 @@ const Model = ({ show, onClose }) => {
   return (
     <div>
       {show && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 backdrop-blur-sm overflow-y-auto z-[999]">
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 backdrop-blur-sm overflow-y-auto z-[99999]">
           <div className="min-h-screen flex items-center justify-center py-10 px-4">
             <div className="bg-white p-8 rounded-xl w-full max-w-2xl shadow-lg relative">
-              <button className="absolute top-3 right-3 text-gray-500 hover:text-black" onClick={onClose}>
+              <button className="absolute top-3 right-3 text-gray-500 hover:text-black cursor-pointer" onClick={onClose}>
                 ✖
               </button>
               <h2 className="text-xl font-semibold mb-6 text-center">Get a quote</h2>
