@@ -24,3 +24,8 @@
     --para-color:#575757;
     --para-size:20px;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

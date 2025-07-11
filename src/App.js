@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
-import Resource from './components/Resource/Resource';
+import Resource from './pages/Resource/Resource';
 // import Solution from './components/Solution/Solution';
-import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import ScrollToTop from './pages/ScrollToTop/ScrollToTop';
 
 function App() {
   return (

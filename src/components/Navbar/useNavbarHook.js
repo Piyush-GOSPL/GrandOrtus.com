@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export const useNavbarHook = () => {
     const [menuBar, setMenuBar] = useState(false);
@@ -11,7 +11,7 @@ export const useNavbarHook = () => {
        setOpenSubMenuIndex(openSubMenuIndex === index ? null : index);
     };
    
-   
+
     const closeMenuBar = () => {
         setMenuBar(!menuBar);
     }

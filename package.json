@@ -14,9 +14,9 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "autoprefixer": "^10.4.20",
+    "aos": "^2.3.4",
+    "framer-motion": "^12.19.1",
     "owl.carousel": "^2.3.4",
-    "postcss": "^8.5.2",
     "process": "^0.11.10",
     "react": "^18.3.1",
     "react-countup": "^6.5.3",
@@ -26,10 +26,8 @@
     "react-intersection-observer": "^9.16.0",
     "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^6.29.0",
-    "react-scripts": "^3.0.1",
-    "tailwindcss": "^4.0.7",
-    "web-vitals": "^4.2.4",
-    "webpack": "^5.98.0"
+    "react-scripts": "^3.4.4",
+    "web-vitals": "^4.2.4"
   },
   "browserslist": {
     "production": [
@@ -44,8 +42,12 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
     "css-loader": "^7.1.2",
+    "postcss": "^8.5.5",
     "postcss-loader": "^8.1.1",
-    "style-loader": "^4.0.0"
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^4.1.10",
+    "webpack": "^5.99.9"
   }
 }
