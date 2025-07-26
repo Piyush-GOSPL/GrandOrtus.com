@@ -1,16 +1,11 @@
 import React from "react";
+import BannerSection from "../BannerSection";
 
 const AwardsandCertification = () => {
   return (
     <section className="w-full ">
-      <div
-        className="h-[50vh] w-full bg-no-repeat bg-cover bg-center flex items-center pl-25"
-        style={{ backgroundImage: "url('/assets/AwardsandCertification.svg')" }}
-      >
-        <h1 className="text-white text-4xl md:text-5xl font-bold">
-          Awards and Certification
-        </h1>
-      </div>
+      
+      <BannerSection heading="Awards and Certification" bgImage="/assets/award.png"/>
 
       <div
         className="bg-no-repeat bg-cover bg-center  w-full py-10"

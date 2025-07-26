@@ -145,13 +145,11 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder="Email"
-                className="w-full md:w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-              />
+                className="w-full md:w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"/>
             </div>
             <select
               name="service"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-            >
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
               <option value="" disabled selected>
                 Select Service
               </option>
@@ -171,8 +169,7 @@ const Contact = () => {
             <textarea
               name="message"
               placeholder="Message"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-            />
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"/>
 
             <div className="flex justify-center">
               <ReCAPTCHA
@@ -193,8 +190,7 @@ const Contact = () => {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="w-full md:w-1/3 bg-blue-500 border border-blue-500 text-white p-3 rounded-lg text-center hover:bg-white hover:text-blue-500"
-              >
+                className="w-full md:w-1/3 bg-blue-500 border border-blue-500 text-white p-3 rounded-lg text-center hover:bg-white hover:text-blue-500">
                 Submit
               </button>
             </div>

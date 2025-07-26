@@ -40,6 +40,12 @@ import ZeroTrust from "../Solution/ZeroTrust";
 import ProductOne from "../Product/ProductOne";
 import ProductTwo from "../Product/ProductTwo";
 import ApplyPage from "./CurrentOpnings/ApplyPage";
+import BlogDetail_WindowsVsLinux from "../Blog/BlogDetail_WindowsVsLinux";
+import BlogDetail_FutureTechnology from "../Blog/BlogDetail_FutureTechnology";
+import BlogDetail_Transformative from "../Blog/BlogDetail_Transformative";
+import BlogDetail_Cybersecurity from "../Blog/BlogDetail_Cybersecurity";
+import BlogDetail_ITIndustry from "../Blog/BlogDetail_ITIndustry";
+import BlogDetail_ITServices from "../Blog/BlogDetail_ITServices";
 // import ScrollToTop from "../ScrollToTop/ScrollToTop";
 
 
@@ -97,6 +103,12 @@ const Resource = () => {
         <Route path="/ZeroTrust" element={<ZeroTrust/>}/>
         <Route path="/ProductOne" element={<ProductOne/>}/>
         <Route path="/ProductTwo" element={<ProductTwo/>}/>
+        <Route path="/BlogDetail_WindowsVsLinux" element={< BlogDetail_WindowsVsLinux/>} />
+        <Route path="/BlogDetail_FutureTechnology" element={<BlogDetail_FutureTechnology/>}/>
+        <Route path="/BlogDetail_Transformative" element={<BlogDetail_Transformative/>}/>
+        <Route path="BlogDetail_Cybersecurity" element={<BlogDetail_Cybersecurity/>}/>
+        <Route path="BlogDetail_ITIndustry" element={<BlogDetail_ITIndustry/>}/>
+        <Route path="BlogDetail_ITServices" element={<BlogDetail_ITServices/>}/>
       </Routes>
       <Model show={showModal} onClose={closeHandler} />
       <Footer />

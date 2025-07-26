@@ -13,7 +13,7 @@ const InovationSection = () => {
 
   const inovationData = [
     {
-      imageURL: '/assets/innovative-1.svg',
+      imageURL: '/assets/inno.png',
       heading: 'Innovative ideas',
       subHeading:
         'Innovative ideas are creative solutions that challenge norms, solve problems, and drive meaningful progress.',

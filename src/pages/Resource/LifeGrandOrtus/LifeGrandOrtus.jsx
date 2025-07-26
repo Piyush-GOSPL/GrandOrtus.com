@@ -46,7 +46,7 @@ const LifeGrandOrtus = () => {
       {/* 👇 Video Section */}
       <div className="w-full py-10 px-5 bg-[#f4f4f4] flex flex-col items-center">
         <h2 className="text-3xl font-bold text-[#333] mb-6">
-          A Glimpse into Our Culture
+          
         </h2>
         <div className="w-full max-w-4xl aspect-video rounded-lg overflow-hidden shadow-xl">
           <video
@@ -60,7 +60,7 @@ const LifeGrandOrtus = () => {
         </div>
       </div>
 
-      {/* Culture Highlights */}
+    
       <div className="bg-[radial-gradient(31.01%_50%_at_50%_50%,rgba(217,217,217,0.18)_0%,rgba(115,115,115,0.1458)_99.5%)] pt-10">
         <div className="bg-no-repeat bg-center bg-cover bg-[url('/assets/Culture.svg')] p-15 my-20 ">
           <h1 className="text-center text-2xl text-white mt-[-36px]">
@@ -103,13 +103,11 @@ const LifeGrandOrtus = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="text-center p-10 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[2px] after:h-[2px] after:bg-gray-300 after:-z-10 after:right-0 after:h-full after:bg-[#00000091]"
-            >
+              className="text-center p-10 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[2px] after:h-[2px] after:bg-gray-300 after:-z-10 after:right-0 after:h-full after:bg-[#00000091]">
               <img
                 src={item.imgSrc}
                 alt={item.title}
-                className="w-16 h-16 mx-auto"
-              />
+                className="w-16 h-16 mx-auto"/>
               <h1 className="text-[20px] text-[#575757] font-medium p-2">
                 {item.title}
               </h1>

@@ -33,7 +33,7 @@ const SatisfiedCustomers = () => {
   const Customer = [
     {
       img_url: "/assets/colan.svg",
-      name: "Sunit Kumar",
+      name: "Sunil Kumar",
       description: `Grand Ortus consistently delivers exceptional service, showcasing a deep understanding of client needs and innovative solutions. Their team is professional, reliable, and highly responsive throughout every project phase.`,
       cast: "Vice President",
       img_url1: "/assets/sunil.svg",
@@ -41,8 +41,15 @@ const SatisfiedCustomers = () => {
     {
       img_url: "/assets/colan.svg",
       name: "Ajay Kumar",
-      description: `Grand Ortus consistently delivers exceptional service, showcasing a deep understanding of client needs and innovative solutions. Their team is professional, reliable, and highly responsive throughout every project phase.`,
+      description: `We had the pleasure of working with Grand Ortus recently, and I must say that my experience was highly positive. Their Team demonstrated exceptional professionalism and technical expertise throughout the entire project. All from the initial consultation to final Implementation.`,
       cast: "Server Engineer",
+      img_url1: "/assets/ajay.svg",
+    },
+    {
+      img_url: "/assets/colan.svg",
+      name: "Sanjay Singh",
+      description: `we collaborating with Grand Ortus on a complex IT infrastructure project, Their attention to detail and commitment to delivering high-quality results were evident at every stage.`,
+      cast: "Chief Information Officer",
       img_url1: "/assets/ajay.svg",
     },
   ];
@@ -54,10 +61,10 @@ const SatisfiedCustomers = () => {
       </h1>
 
       <div className="my-20">
-        {isClient && (  // ✅ Prevents server-side rendering issues
+        {isClient && (  
           <OwlCarousel className="owl-theme" {...option}>
             {Customer.map((Customers, index) => (
-              <div key={index} className="bg-white p-4 rounded-2xl shadow-lg">
+              <div key={index} className="bg-white p-4 rounded-2xl shadow-lg min-h-[250px]">
                 <img src={Customers.img_url} alt="" className="w-5!" />
                 <p>{Customers.description}</p>
                 <div className="flex pl-3 mt-4">

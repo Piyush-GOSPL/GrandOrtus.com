@@ -56,7 +56,7 @@ const Navbar = ({ onGetQuoteClick }) => {
             <li
               onClick={() => toggleSubMenu(index)}
               key={index}
-              className="relative group text-lg text-[18px] px-4 py-2"
+              className="relative group text-lg text-[16px] px-4 py-2"
             >
               <span className="flex items-center gap-2 hover:bg-sky-700 duration-150 ease-in-out hover:text-white text-[#575757] p-[8px] rounded-[10px]">
                 <NavLink to={menu.url || "#"}>{menu.label}</NavLink>
@@ -85,7 +85,7 @@ const Navbar = ({ onGetQuoteClick }) => {
                             {submenuCategory.submenu.map((submenuItem, i) => (
                               <li
                                 key={i}
-                                className="px-1 py-1 text-lg text-[18px] text-[#575757] hover:bg-[#0090d2] hover:text-white"
+                                className="px-1 py-1 text-lg text-[16px] text-[#575757] hover:bg-[#0090d2] hover:text-white"
                               >
                                 <NavLink
                                   to={submenuItem.url}

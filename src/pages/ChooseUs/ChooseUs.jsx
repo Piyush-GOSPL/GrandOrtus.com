@@ -48,7 +48,7 @@ const ChooseUs = () => {
       </div>
 
       {/* Right Section */}
-      <div className="w-full">
+      <div className="w-full hidden sm:block">
         <img src="/assets/choose-rtimg.svg" alt="Why Choose Us" className="w-full" />
       </div>
     </section>
