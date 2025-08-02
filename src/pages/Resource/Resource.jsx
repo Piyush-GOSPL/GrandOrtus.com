@@ -63,23 +63,23 @@ const Resource = () => {
 
   return (
     <section className="w-full pb-0 ">
-      <Navbar onGetQuoteClick={openModelHandler} />
+      <Navbar onGetQuoteClick={openModelHandler}/>
       
       <Routes>
-      <Route path="/" element={<Navigate to="/Home" replace />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Blogs" element={<Blogs />} />
-        <Route path="/CaseStudy" element={<CaseStudy />} />
-        <Route path="/AwardsandCertification"element={<AwardsandCertification />}/>
-        <Route path="/LifeGrandOrtus" element={<LifeGrandOrtus />} />
-        <Route path="/CurrentOpenings" element={<CurrentOpenings />} />
-        <Route path="/apply" element={<ApplyPage />} />
+      <Route path="/" element={<Navigate to="/Home" replace />}/>
+        <Route path="/Home" element={<Home/>}/>
+        <Route path="/About" element={<About/>}/>
+        <Route path="/Blogs" element={<Blogs/>}/>
+        <Route path="/CaseStudy" element={<CaseStudy/>}/>
+        <Route path="/AwardsandCertification"element={<AwardsandCertification/>}/>
+        <Route path="/LifeGrandOrtus" element={<LifeGrandOrtus/>}/>
+        <Route path="/CurrentOpenings" element={<CurrentOpenings/>}/>
+        <Route path="/apply" element={<ApplyPage />}/>
         <Route path="/CSR" element={<CSR />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Clients" element={<Clients />} />
-        <Route path="/Partners" element={<Partners />} />
-        <Route path="/Startups" element={< Startups/>} />
+        <Route path="/Contact" element={<Contact/>}/>
+        <Route path="/Clients" element={<Clients/>}/>
+        <Route path="/Partners" element={<Partners/>}/>
+        <Route path="/Startups" element={< Startups/>}/>
         <Route path="/MSMEs" element={<MSMEs/>}/>
         <Route path="/Enterprises" element={<Enterprises/>}/>
         <Route path="ServicesList" element={<ServicesList/>}/>
@@ -110,7 +110,7 @@ const Resource = () => {
         <Route path="BlogDetail_ITIndustry" element={<BlogDetail_ITIndustry/>}/>
         <Route path="BlogDetail_ITServices" element={<BlogDetail_ITServices/>}/>
       </Routes>
-      <Model show={showModal} onClose={closeHandler} />
+      <Model show={showModal} onClose={closeHandler}/>
       <Footer />
     </section>
   );

@@ -1,36 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./CompanyVison.css";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const CompanyVision = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 600,
+      once: true,
+      easing: "ease-in-cubic",
+    });
+  }, []); // <-- Add this empty array to run only once
+
   return (
     <section className="w-full p-5 md:pt-20 md:pr-20 md:pl-20 pb-0 flex md:flex-row flex-col justify-center md:gap-20 gap-5 bg-[#C5DEE9]">
       {/* Left Image Section */}
-      <div className="md:w-[50%] w-full flex flex-col items-center gap-4 lg:gap-0">
+      <div
+        data-aos="fade-right" 
+        className="md:w-[50%] w-full flex flex-col items-center gap-4 lg:gap-0"
+      >
         <img
-          src="./assets/Rectangle-2.svg"
-          alt=""
-          className="rectangle-1 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[]"
+          src="/assets/Rectangle-2.svg"
+          alt="rectangle-2"
+          className="rectangle-1 transition-transform duration-300 hover:scale-125"
         />
         <img
-          src="./assets/Rectangle-1.svg"
-          alt=""
-          className="rectangle-2 animate-zoom transition-transform duration-300 hover:scale-125 "
+          src="/assets/Rectangle-1.svg"
+          alt="rectangle-1"
+          className="rectangle-2 transition-transform duration-300 hover:scale-125"
         />
         <img
-          src="./assets/Rectangle-3.svg"
-          alt=""
-          className="rectangle-3 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[9999]"
+          src="/assets/Rectangle-3.svg"
+          alt="rectangle-3"
+          className="rectangle-3 transition-transform duration-300 hover:scale-125"
         />
         <img
-          src="./assets/Rectangle-4.svg"
-          alt=""
-          className="rectangle-4 animate-zoom transition-transform duration-300 hover:scale-125 hover:z-[9999]"
+          src="/assets/Rectangle-4.svg"
+          alt="rectangle-4"
+          className="rectangle-4 transition-transform duration-300 hover:scale-125"
         />
       </div>
 
       {/* Right Content Section */}
-      <div className="md:w-[50%] w-full">
+      <div className="md:w-[50%] w-full" data-aos="fade-left">
         <span className="text-[30px] font-bold py-4 block">
           Company’s Vision
         </span>
@@ -46,7 +59,7 @@ const CompanyVision = () => {
 
         {/* About Button */}
         <Link to="/About" className="cursor-pointer">
-          <button className="bg-[#575757] cursor-pointer px-6 py-3 text-white my-6 transition-all duration-300 hover:bg-white hover:text-[#0090d2] border-2 border-[#575757]">
+          <button className="bg-[#575757] px-6 py-3 text-white my-6 transition-all duration-300 hover:bg-white hover:text-[#0090d2] border-2 border-[#575757]">
             ABOUT COMPANY
           </button>
         </Link>
@@ -56,11 +69,14 @@ const CompanyVision = () => {
           <div className="text-[24px] font-bold text-[#0090d2]">5.0</div>
           <div className="border-l-2 border-[#575757] pl-4">
             <div className="flex gap-1">
-              <img src="./assets/star 1.svg" alt="Star" className="w-5 h-5 " />
-              <img src="./assets/star 1.svg" alt="Star" className="w-5 h-5" />
-              <img src="./assets/star 1.svg" alt="Star" className="w-5 h-5" />
-              <img src="./assets/star 1.svg" alt="Star" className="w-5 h-5" />
-              <img src="./assets/star 1.svg" alt="Star" className="w-5 h-5" />
+              {[...Array(5)].map((_, i) => (
+                <img
+                  key={i}
+                  src="/assets/star 1.svg"
+                  alt="Star"
+                  className="w-5 h-5"
+                />
+              ))}
             </div>
             <div className="text-sm text-[#575757]">Genuine Rating</div>
           </div>

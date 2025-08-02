@@ -10,7 +10,7 @@ const SatisfiedCustomers = () => {
   useEffect(() => {
     setIsClient(true);
     setTimeout(() => {
-      window.dispatchEvent(new Event("resize")); // 🔹 Forces OwlCarousel to recalculate
+      window.dispatchEvent(new Event("resize")); 
     }, 500);
   }, []);
 
@@ -18,7 +18,7 @@ const SatisfiedCustomers = () => {
     loop: true,
     margin: 10,
     autoplay: true,
-    autoWidth: false, 
+    autoWidth: false,
     autoplayTimeout: 4000,
     responsiveClass: true,
     mergeFit: true,
@@ -61,14 +61,21 @@ const SatisfiedCustomers = () => {
       </h1>
 
       <div className="my-20">
-        {isClient && (  
+        {isClient && (
           <OwlCarousel className="owl-theme" {...option}>
             {Customer.map((Customers, index) => (
-              <div key={index} className="bg-white p-4 rounded-2xl shadow-lg min-h-[250px]">
+              <div
+                key={index}
+                className="bg-white p-4 rounded-2xl shadow-lg min-h-[250px]"
+              >
                 <img src={Customers.img_url} alt="" className="w-5!" />
                 <p>{Customers.description}</p>
                 <div className="flex pl-3 mt-4">
-                  <img src={Customers.img_url1} alt="Customer" className="w-16!" />
+                  <img
+                    src={Customers.img_url1}
+                    alt="Customer"
+                    className="w-16!"
+                  />
                   <div className="ml-5">
                     <h5 className="pb-2">{Customers.name}</h5>
                     <p>{Customers.cast}</p>

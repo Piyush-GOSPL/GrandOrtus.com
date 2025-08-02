@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ServiceSection.css";
 import { Link } from "react-router-dom";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const services = [
   {
@@ -126,6 +128,13 @@ const services = [
 // ];
 
 const ServiceSection = () => {
+  useEffect(()=>{
+    AOS.init({
+      durstion:600,
+      once: true,
+
+    })
+  })
   return (
     
     <section className="w-full mx-auto relative">
@@ -142,6 +151,8 @@ const ServiceSection = () => {
         <Link to={service.path}>
           <div
             key={index}
+            data-aos="fade-up"
+            data-aos-delay={index * 400}
             className="min-h-72 relative transform transition-transform duration-300 hover:scale-105  hover:shadow-2xl"
           >
             <div className="absolute bg-white w-20 h-20 rounded-full left-[50%] translate-x-[-50%] translate-y-[-30px] flex items-center justify-center shadow-lg p-2.5 ">

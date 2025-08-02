@@ -40,11 +40,11 @@ const CaseStudy = () => {
         </h1>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 px-4 sm:px-6 md:px-10 lg:px-20">
-          <div className="relative bg-[#0092D68F] rounded-lg p-6 sm:p-8 md:p-10 w-full md:max-w-2xl">
-            <h3 className="bg-[#575757F0] rounded-full text-white text-center py-3 text-xl absolute -top-6 left-1/2 -translate-x-1/2 px-6 w-max">
+          <div className="relative bg-[#0090d2] rounded-lg p-6 sm:p-8 md:p-10 w-full md:max-w-2xl">
+            <h3 className="bg-[#575757F0] rounded-full text-white text-center py-3 text-xl absolute -top-6 left-1/2 -translate-x-1/2 px-6 w-[300px]">
               Case Study
             </h3>
-            <p className="mt-8 text-sm sm:text-md text-gray-800">
+            <p className="mt-8 text-sm sm:text-md text-white">
               The client, a leading healthcare institute with multiple hospitals
               and research centers, was facing increasing cybersecurity threats,
               including ransomware attacks and insider threats. With sensitive
