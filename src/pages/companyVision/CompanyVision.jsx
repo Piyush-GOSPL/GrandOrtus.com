@@ -78,7 +78,7 @@ const CompanyVision = () => {
                 />
               ))}
             </div>
-            <div className="text-sm text-[#575757]">Genuine Rating</div>
+            {/* <div className="text-sm text-[#575757]">Genuine Rating</div> */}
           </div>
         </div>
       </div>

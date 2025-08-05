@@ -5,7 +5,7 @@ import "./BusinessProcess.css";
 export default function BusinessProcess() {
   return (
     <section className="w-full p-5">
-      <h1 className="text-2xl font-bold text-center mb-6">
+      <h1 className="text-3xl font-bold text-center mb-6">
         Innovation Solution, Dedicated Services - Transforming Your Business
       </h1>
 
@@ -24,8 +24,8 @@ export default function BusinessProcess() {
         </div>
 
         {/* Process Steps */}
-        <div className="w-full md:w-1/2 space-y-6">
-          <h2 className="text-xl font-semibold">Understand the Business Process</h2>
+        <div className="w-full md:w-1/2 space-y-6 ">
+          <h2 className="text-2xl font-semibold">Understand the Business Process</h2>
 
           {/* Step 1 */}
           <div className="flex items-start space-x-4">

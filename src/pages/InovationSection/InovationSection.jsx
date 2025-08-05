@@ -15,15 +15,15 @@ const InnovationSection = () => {
   const innovationData = [
     {
       imageURL: '/assets/inno.png',
-      heading: 'Innovative ideas',
+      heading: 'Innovative Ideas',
       subHeading:
         'Innovative ideas are creative solutions that challenge norms, solve problems, and drive meaningful progress.',
     },
     {
       imageURL: '/assets/Expertise-1.svg',
-      heading: 'Expertise strategy',
+      heading: 'Expertise Strategy',
       subHeading:
-        'Innovative ideas are creative solutions that challenge norms, solve problems, and drive meaningful progress.',
+        'Expertise strategy leverages specialized knowledge and skills to create focused plans that achieve goals effectively and efficiently.',
     },
   ];
 
